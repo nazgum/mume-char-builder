@@ -1,0 +1,21 @@
+{
+  "name": "mume-char-builder",
+  "version": "1.0.0",
+  "description": "character builder for mume",
+  "main": "app.js",
+  "live": "nodemon app.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "github.com/nazgum/mume-char-builder"
+  },
+  "keywords": [
+    "mume"
+  ],
+  "author": "nazgum",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
