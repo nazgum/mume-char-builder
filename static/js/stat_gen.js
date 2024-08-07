@@ -1,3 +1,5 @@
+import { skillsList } from './data/skills_list.js';
+
 export class StatGen {
   constructor() {
     this.initialStats = { str: 8, int: 8, wis: 8, dex: 8, con: 8, wil: 8, per: 8 };
@@ -8,15 +10,12 @@ export class StatGen {
   }
 
   getStatCost(baseValue, currentValue) {
-    console.log("base value: ", baseValue);
-    console.log("current value: ", currentValue);
     let cost = 0;
     let count = 0;
     for (let i = baseValue; i < currentValue; i++) {
       count += 1
       cost += count;
     }
-    console.log("cost: ", cost)
     return cost;
   }
 
@@ -59,9 +58,56 @@ export class StatGen {
     document.getElementById('availablePoints').textContent = `Available points: ${this.availablePoints}`;
   }
 
+  calculateKnowledge(skill) {
+    let knowledge = skill.knowledge.base;
+    if (skill.knowledge.per) {
+      const perValue = parseInt(document.getElementById('per').value);
+      knowledge += skill.knowledge.per * perValue;
+    }
+    if (skill.knowledge.int) {
+      const intValue = parseInt(document.getElementById('int').value);
+      knowledge += skill.knowledge.int * intValue;
+    }
+    if (skill.knowledge.str) {
+      const strValue = parseInt(document.getElementById('str').value);
+      knowledge += skill.knowledge.str * strValue;
+    }
+    if (skill.knowledge.wis) {
+      const wisValue = parseInt(document.getElementById('wis').value);
+      knowledge += skill.knowledge.wis * wisValue;
+    }
+    if (skill.knowledge.dex) {
+      const dexValue = parseInt(document.getElementById('dex').value);
+      knowledge += skill.knowledge.dex * dexValue;
+    }
+    if (skill.knowledge.con) {
+      const conValue = parseInt(document.getElementById('con').value);
+      knowledge += skill.knowledge.con * conValue;
+    }
+    if (skill.knowledge.wil) {
+      const wilValue = parseInt(document.getElementById('wil').value);
+      knowledge += skill.knowledge.wil * wilValue;
+    }
+    return knowledge;
+  }
+
+  updateSkillsKnowledge() {
+    let skillElements = document.querySelectorAll('.skill');
+    skillElements.forEach(skillElement => {
+      let skillName = skillElement.dataset.skillName;
+      let skill = skillsList.find(s => s.name === skillName);
+      let knowledgeMax = Math.round(this.calculateKnowledge(skill));
+
+      if (knowledgeMax > skill.knowledge_cap) {
+        knowledgeMax = skill.knowledge_cap;
+      }
+      skillElement.querySelector('.knowledge-max').textContent = `${knowledgeMax}%`;
+    });
+  }
+
   addStatInputListeners() {
     for (let stat in this.initialStats) {
-      const statInput = document.getElementById(stat);
+      let statInput = document.getElementById(stat);
 
       statInput.addEventListener('input', () => {
         let baseValue = this.initialStats[stat] + this.raceModifiers[stat];
@@ -86,6 +132,8 @@ export class StatGen {
           this.updateAvailablePoints();
         }
 
+        this.updateSkillsKnowledge();
+
         document.getElementById(`${stat}-current`).textContent = value;
       });
     }
@@ -98,6 +146,7 @@ export class StatGen {
       statInput.value = baseValue;
     }
     this.updateAvailablePoints();
+    this.updateSkillsKnowledge();
   }
 
   addResetButtonListener() {

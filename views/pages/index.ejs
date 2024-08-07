@@ -1,7 +1,5 @@
 <%- include('../partials/header') %>
 
-<h1>Home Page!</h1>
-
 <section id="char-setup" class="card">
   <div id="choose-faction">
     <label for="faction">Faction:</label>
@@ -17,10 +15,20 @@
     <label for="subrace">Subrace:</label>
     <select id="subrace"></select>
   </div>
+
+  <div id="choose-level">
+    <label for="level">Level:</label>
+    <input type="number" id="level" name="level" min="0" max="100" value="0">
+  </div>
+
+  <div id="choose-pracs">
+    <label for="pracs">Pracs:</label>
+    <span id="pracs">0/0</span>
+  </div>
 </section>
 
 
-<div class="grid">
+<div class="container">
   <%- include('../partials/statgen') %>
   <div id="skills"></div>
 </div>

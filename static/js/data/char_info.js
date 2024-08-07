@@ -1,4 +1,4 @@
-export const data = {
+export const charInfo = {
   factions: [
     {
       name: 'Free Folk',
