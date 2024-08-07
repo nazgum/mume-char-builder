@@ -2,4 +2,31 @@
 
 <h1>Home Page!</h1>
 
+<section id="char-setup" class="card">
+  <div id="choose-faction">
+    <label for="faction">Faction:</label>
+    <select id="faction"></select>
+  </div>
+
+  <div id="choose-race">
+    <label for="race">Race:</label>
+    <select id="race"></select>
+  </div>
+
+  <div id="choose-subrace">
+    <label for="subrace">Subrace:</label>
+    <select id="subrace"></select>
+  </div>
+</section>
+
+
+<div class="grid">
+  <%- include('../partials/statgen') %>
+  <div id="skills"></div>
+</div>
+
+<div id="traits"></div>
+
+
+
 <%- include('../partials/footer') %>

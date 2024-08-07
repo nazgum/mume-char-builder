@@ -1,0 +1,38 @@
+.card {
+  background: hsla(209, 24%, 78%, 0.21);
+  padding: 1em;
+  margin: 1em;
+}
+
+#char-setup {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+#statgen {
+  text-align: center;
+  max-width: 300px;
+  font-size: 0.8em;
+  span { vertical-align: top; }
+}
+
+.grid {
+  display: inline-grid;
+  grid-template-columns: 2fr 3fr;
+}
+
+#traits {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.trait {
+  background: hsla(209, 24%, 78%, 0.21);
+  padding: 1em;
+  margin: 1em;
+  font-size: 0.8em;
+
+  h4 { margin: 0; display: none; }
+  p { margin: 0; }
+}
