@@ -197,7 +197,7 @@ export const skillsList = [
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
-  {
+  /*{
     name: 'Bash',
     class: 'Warrior',
     factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
@@ -205,5 +205,5 @@ export const skillsList = [
     pracs: { max: 43, Tarkhnarb: 43, Zaugurz: 43, Troll: 40 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
-  },
+  },*/
 ]

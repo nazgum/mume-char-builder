@@ -1,9 +1,10 @@
 import { skillsList } from './data/skills_list.js';
 
 export class SkillTree {
-  constructor(statGen) {
+  constructor(character) {
+    this.character  = character
+    this.statGen    = character.statGen
     this.skills_div = document.getElementById('skills');
-    this.statGen = statGen
   }
 
   updateSkills(faction, race, subrace) {
@@ -52,13 +53,14 @@ export class SkillTree {
         skill_name_div.textContent = skill.name;
 
         let pracs_input = document.createElement('input');
+        pracs_input.classList.add('pracs-input');
         pracs_input.type = 'number';
         pracs_input.value = 0;
         pracs_input.min = 0;
         pracs_input.max = skill.pracs[race.name] || skill.pracs.max;
         
         let pracs_label = document.createElement('span');
-        pracs_label.textContent = `/ ${pracs_input.max} Pracs`;
+        pracs_label.textContent = `/ ${pracs_input.max}`;
 
         skill_pracs_div.appendChild(pracs_input);
         skill_pracs_div.appendChild(pracs_label);
@@ -78,9 +80,57 @@ export class SkillTree {
         skill_knowledge_div.appendChild(knowledge_max_span);
 
         group_div.appendChild(skill_div);
+
+        pracs_input.addEventListener('input', () => {
+          this.enforcePracLimits(pracs_input);
+          this.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
+          this.character.updateAvailPracs();
+        });
       });
 
       this.skills_div.appendChild(group_div);
     }
+  }
+
+  enforcePracLimits(pracs_input) {
+    let pracs_spent = parseInt(pracs_input.value)
+    let pracs_max   = parseInt(pracs_input.max);
+    if (pracs_spent < 0 || isNaN(pracs_spent)) {
+      pracs_input.value = 0;
+    } else if (pracs_spent > pracs_max) {
+      pracs_input.value = pracs_max
+    }
+  }
+
+  updateKnowledge(pracs_spent, pracs_max, knowledge_span, knowledge_max_span) {
+    pracs_spent   = parseInt(pracs_spent);
+    pracs_max     = parseInt(pracs_max);
+    let knowledge_max = parseInt(knowledge_max_span.textContent);
+    let knowledge_current = knowledge_max/pracs_max * pracs_spent;
+
+    // Weights: first prac worth 3x, last prac worth 1/3x
+    let start_weight = 3;
+    let end_weight = 1 / 3;
+    let weight_decrement = (start_weight - end_weight) / (pracs_max - 1);
+
+    let total_weight = 0;
+    let current_weight = start_weight;
+
+    for (let i = 1; i <= pracs_spent; i++) {
+      total_weight += current_weight;
+      current_weight -= weight_decrement;
+    }
+
+    let max_total_weight = 0;
+    current_weight = start_weight;
+    for (let i = 1; i <= pracs_max; i++) {
+      max_total_weight += current_weight;
+      current_weight -= weight_decrement;
+    }
+
+    knowledge_current = (total_weight / max_total_weight) * knowledge_max;
+    knowledge_current = Math.round(knowledge_current);
+
+    knowledge_span.textContent = `${knowledge_current}%`;
   }
 }

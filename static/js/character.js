@@ -6,19 +6,25 @@ import { Traits } from './traits.js';
 export class Character {
   constructor() {
     this.statGen        = new StatGen();
-    this.skillTree      = new SkillTree(this.statGen);
+    this.skillTree      = new SkillTree(this);
     this.traits         = new Traits();
+    this.pracs_avail    = 0;
+    this.pracs_max      = 0;
+    this.pracs_spent    = {};
 
     // refs to html elements
-    this.faction_select = document.getElementById('faction');
-    this.race_select    = document.getElementById('race');
-    this.subrace_select = document.getElementById('subrace');
-    this.level_input    = document.getElementById('level');
-    this.pracs_span     = document.getElementById('pracs');
+    this.faction_select   = document.getElementById('faction');
+    this.race_select      = document.getElementById('race');
+    this.subrace_select   = document.getElementById('subrace');
+    this.level_input      = document.getElementById('level');
+    this.pracs_span       = document.getElementById('pracs');
+    this.pracs_avail_span = document.getElementById('pracs-avail');
+    this.pracs_max_span   = document.getElementById('pracs-max');
 
     this.setupListeners();
     this.populateFactions();
     this.statGen.resetStats();
+    this.updateMaxPracs();
   }
 
   populateFactions() {
@@ -72,6 +78,50 @@ export class Character {
 
     this.statGen.updateStats(race.stats); // Update stats based on the selected race
     this.statGen.addStatInputListeners(race.stats); // Add listeners for stat inputs
+    this.updateMaxPracs();
+  }
+
+  calculateMaxPracs(level, faction, race) {
+    let pracs;
+    if (faction === 'Free Folk' || race === 'Númenórean') {
+      if (level <= 25) {
+        pracs = 11 * level;
+      } else {
+        pracs = (11 * 25) + Math.floor((level - 25) / 2);
+      }
+    } else {
+      if (level <= 25) {
+        pracs = 10 * level;
+      } else {
+        pracs = (10 * 25) + Math.floor((level - 25) / 2);
+      }
+    }
+    return pracs;
+  }
+
+  updateMaxPracs() {
+    let level = parseInt(this.level_input.value);
+    let faction = this.faction_select.value;
+    let race = this.race_select.value;
+    
+    if (isNaN(level) || level <= 0 || level > 100) {
+      level = 1;
+      this.level_input.value = level;
+    }
+
+    this.pracs_max = this.calculateMaxPracs(level, faction, race);
+    this.updateAvailPracs();
+  }
+
+  updateAvailPracs() {
+    this.pracs_avail = this.calculateAvailPracs();
+    this.pracs_span.textContent = `${this.pracs_avail}/${this.pracs_max}`;
+  }
+
+  calculateAvailPracs() {
+    let skill_inputs = document.querySelectorAll('.pracs-input');
+    let total_spent = Array.from(skill_inputs).reduce((sum, input) => sum + parseInt(input.value), 0);
+    return (this.pracs_max - total_spent);
   }
 
   setupListeners() {
@@ -102,6 +152,15 @@ export class Character {
         this.traits.updateTraits(race, subrace);
         this.statGen.resetStats();
       }
+    });
+
+    this.level_input.addEventListener('change', (event) => {
+      console.log("level changed")
+      this.updateMaxPracs();
+    });
+
+    this.level_input.addEventListener('blur', () => {
+      this.updateMaxPracs();
     });
   }
 }
