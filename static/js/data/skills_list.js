@@ -305,4 +305,329 @@ export const skillsList = [
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, con: 1.8, wil: 1.8 }
   },
+  {
+    name: 'Magic Missile',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 8, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Ventriloquate',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 5, Númenórean: 5 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Detect Invis',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 11, Númenórean: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Detect Magic',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 8, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Armour',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Chill Touch',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 8, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Create Light',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 8, Númenórean: 3 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Locate Magic',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 10 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Burning Hands',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 11, Númenórean: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Shroud',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Find the Path',
+    class: 'Mage',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Locate',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Call Familiar',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 7, Númenórean: 7 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Night Vision',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 11, Númenórean: 9 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Shocking Grasp',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 11, Númenórean: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Earthquake',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Teleport',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 13 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Block Door',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 11, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Lightning Bolt',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Control Weather',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll', 'Númenórean'],
+    pracs: { max: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Store',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Colour Spray',
+    class: 'Mage',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Locate Life',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Call Lightning',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Enchant',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 22, Númenórean: 13 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Scry',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Shield',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Charm',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 9 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Sleep',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 13 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Fireball',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Magic Blast',
+    class: 'Mage',
+    factions: ['Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 22, Númenórean: 22 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Dispel Magic',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 22, Númenórean: 19 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Watch Room',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 10, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Silence',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Identify',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Portal',
+    class: 'Mage',
+    factions: ['Free Folk', 'Minions of Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 22, Númenórean: 22 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  
 ]
