@@ -21,6 +21,50 @@ main {
 
 #char-info {
   label { display: block; }
+
+  h1 { font-size: 2em; line-height: 1; margin-top: 1em; }
+  h3 { font-size: 1.5em; }
+  h1, h3 { text-align: center; }
+  h3 { margin-bottom: 1em; }
+
+  > div { margin-bottom: 1em; }
+
+  select {
+    padding: 0.2em 0.6em;
+  }
+
+  #faction-btns {
+    display: inline-flex;
+    flex-direction: row;
+    vertical-align: baseline;
+    /*margin: 0 .25em 0 0;*/  
+
+    button {
+      border: 1px solid #888;
+      padding: 0.2em 0.6em;
+      cursor: pointer;
+
+      &:first-child {
+        border-top-left-radius: 0.3em;
+        border-bottom-left-radius: 0.3em;
+      }
+
+      &:last-child {
+        border-top-right-radius: 0.3em;
+        border-bottom-right-radius: 0.3em;
+      }
+      &:not(:last-child) {
+        border-right: 0;
+      }
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+
+    button.selected {
+      font-weight: bold;
+    }
+  }
 }
 
 #statgen {

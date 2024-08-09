@@ -198,7 +198,7 @@ export const charInfo = {
       ]
     },
     {
-      name: 'Minions of Sauron',
+      name: 'Sauron',
       races: [
         {
           name: 'Orc',

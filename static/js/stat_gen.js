@@ -1,7 +1,9 @@
+import { Character } from './character.js';
 import { skillsList } from './data/skills_list.js';
 
 export class StatGen {
-  constructor() {
+  constructor(character) {
+    this.character  = character
     this.initialStats = { str: 8, int: 8, wis: 8, dex: 8, con: 8, wil: 8, per: 8 };
     this.availablePoints = 175;
     this.raceModifiers = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
@@ -95,13 +97,21 @@ export class StatGen {
     let skillElements = document.querySelectorAll('.skill');
     skillElements.forEach(skillElement => {
       let skillName = skillElement.dataset.skillName;
-      let skill = skillsList.find(s => s.name === skillName);
+      let skillClass = skillElement.getAttribute('data-class')
+      let skill = skillsList.find(s => s.name === skillName && s.class === skillClass);
       let knowledgeMax = Math.round(this.calculateKnowledge(skill));
 
       if (knowledgeMax > skill.knowledge_cap) {
         knowledgeMax = skill.knowledge_cap;
       }
       skillElement.querySelector('.knowledge-max').textContent = `${knowledgeMax}%`;
+
+      // update the practiced knowledge of the skill
+      let pracs_input = skillElement.querySelector('.pracs-input');
+      let knowledge_span = skillElement.querySelector('.knowledge-value');
+      let knowledge_max_span = skillElement.querySelector('.knowledge-max');
+
+      this.character.skillTree.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
     });
   }
 

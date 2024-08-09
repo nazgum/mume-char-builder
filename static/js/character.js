@@ -5,15 +5,18 @@ import { Traits } from './traits.js';
 
 export class Character {
   constructor() {
-    this.statGen        = new StatGen();
+    this.statGen        = new StatGen(this);
     this.skillTree      = new SkillTree(this);
     this.traits         = new Traits();
     this.pracs_avail    = 0;
     this.pracs_max      = 0;
     this.pracs_spent    = {};
+    this.faction        = "Free Folk";
+    this.race           = "Dwarf";
+    this.subrace        = "Broadbeam";
 
     // refs to html elements
-    this.faction_select   = document.getElementById('faction');
+    this.faction_btns     = document.getElementById('faction-btns');
     this.race_select      = document.getElementById('race');
     this.subrace_select   = document.getElementById('subrace');
     this.level_input      = document.getElementById('level');
@@ -22,7 +25,7 @@ export class Character {
     this.pracs_max_span   = document.getElementById('pracs-max');
 
     this.setupListeners();
-    this.populateFactions();
+    this.populateRaces();
     this.statGen.resetStats();
     this.updateMaxPracs();
   }
@@ -37,12 +40,12 @@ export class Character {
 
     // Set the first faction as selected and populate races
     this.faction_select.selectedIndex = 0;
-    this.populateRaces(charInfo.factions[0].name);
+    this.populateRaces();
   }
 
-  populateRaces(faction_name) {
+  populateRaces() {
     this.race_select.innerHTML = '';
-    let faction = charInfo.factions.find(f => f.name === faction_name);
+    let faction = charInfo.factions.find(f => f.name === this.faction);
     faction.races.forEach(race => {
       let option = document.createElement('option');
       option.value = race.name;
@@ -58,7 +61,7 @@ export class Character {
   populateSubraces(race_name) {
     this.subrace_select.innerHTML = '';
 
-    let faction_name = this.faction_select.value;
+    let faction_name = this.faction;
     let faction = charInfo.factions.find(f => f.name === faction_name);
     let race = faction.races.find(r => r.name === race_name);
 
@@ -81,9 +84,9 @@ export class Character {
     this.updateMaxPracs();
   }
 
-  calculateMaxPracs(level, faction, race) {
+  calculateMaxPracs(level, race) {
     let pracs;
-    if (faction === 'Free Folk' || race === 'Númenórean') {
+    if (this.faction === 'Free Folk' || race === 'Númenórean') {
       if (level <= 25) {
         pracs = 11 * level;
       } else {
@@ -101,7 +104,6 @@ export class Character {
 
   updateMaxPracs() {
     let level = parseInt(this.level_input.value);
-    let faction = this.faction_select.value;
     let race = this.race_select.value;
     
     if (isNaN(level) || level <= 0 || level > 100) {
@@ -109,7 +111,7 @@ export class Character {
       this.level_input.value = level;
     }
 
-    this.pracs_max = this.calculateMaxPracs(level, faction, race);
+    this.pracs_max = this.calculateMaxPracs(level, race);
     this.updateAvailPracs();
   }
 
@@ -125,10 +127,18 @@ export class Character {
   }
 
   setupListeners() {
-    this.faction_select.addEventListener('change', () => {
-      let selected_faction = this.faction_select.value;
-      this.populateRaces(selected_faction);
-      this.statGen.resetStats();
+
+    // faction btns
+    document.querySelectorAll('#faction-btns button').forEach(button => {
+      button.addEventListener('click', (event) => {
+        this.faction = event.target.getAttribute('data-faction');
+        this.populateRaces(this.faction);
+        this.statGen.resetStats();
+        
+        // Optionally, you can add some visual feedback for the selected button
+        document.querySelectorAll('#faction-btns button').forEach(btn => btn.classList.remove('selected'));
+        event.target.classList.add('selected');
+      });
     });
 
     this.race_select.addEventListener('change', () => {
@@ -138,11 +148,10 @@ export class Character {
     });
 
     this.subrace_select.addEventListener('change', () => {
-      let selected_faction = this.faction_select.value;
       let selected_race    = this.race_select.value;
       let selected_subrace = this.subrace_select.value;
 
-      let faction = charInfo.factions.find(f => f.name === selected_faction);
+      let faction = charInfo.factions.find(f => f.name === this.faction);
       let race = faction.races.find(r => r.name === selected_race);
       let subrace = race.subraces.find(sr => sr.name === selected_subrace);
 

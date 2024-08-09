@@ -32,6 +32,10 @@ export class SkillTree {
         skill.factions.includes(faction.name) && !skill.exclude_races.includes(race.name)
       );
 
+      if (avail_skills.length === 0) {
+        group_div.classList.add('hide');
+      }
+
       avail_skills.forEach(skill => {
         let skill_div           = document.createElement('div');
         let skill_content_div   = document.createElement('div');
@@ -40,6 +44,7 @@ export class SkillTree {
         let skill_knowledge_div = document.createElement('div');
 
         skill_div.classList.add('skill');
+        skill_div.setAttribute('data-class', skill.class);
         skill_name_div.classList.add('skill-name');
         skill_pracs_div.classList.add('skill-pracs');
         skill_knowledge_div.classList.add('skill-knowledge');
@@ -85,6 +90,10 @@ export class SkillTree {
           this.enforcePracLimits(pracs_input);
           this.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
           this.character.updateAvailPracs();
+        });
+
+        pracs_input.addEventListener('focus', () => {
+          pracs_input.select();
         });
       });
 
