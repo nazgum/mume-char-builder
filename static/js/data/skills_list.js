@@ -197,7 +197,7 @@ export const skillsList = [
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
-  /*{
+  {
     name: 'Bash',
     class: 'Warrior',
     factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
@@ -205,5 +205,104 @@ export const skillsList = [
     pracs: { max: 43, Tarkhnarb: 43, Zaugurz: 43, Troll: 40 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
-  },*/
+  },
+  {
+    name: 'Charge',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean', 'Troll'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, dex: 2.4, str: 1.8, wil: 1.8 }
+  },
+  {
+    name: 'Cleaving',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, str: 2.4, dex: 1.8, wil: 1.8 }
+  },
+  {
+    name: 'Concussion',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, str: 2.4, con: 1.8, wil: 1.8 }
+  },
+  {
+    name: 'Endurance',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 58, Tarkhnarb: 58, Zaugurz: 58, Troll: 58 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
+  },
+  {
+    name: 'Kick',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
+  },
+  {
+    name: 'Parry',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, dex: 2.4, per: 1.8, str: 1.8 }
+  },
+  {
+    name: 'Rescue',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 21, Tarkhnarb: 10, Zaugurz: 21, Troll: 8 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, dex: 3.0, wil: 2.0, str: 1.0 }
+  },
+  {
+    name: 'Unarmed',
+    class: 'Warrior',
+    factions: ['Minions of Sauron'],
+    exclude_races: ['Orc', 'Númenórean'],
+    pracs: { max: 34, Troll: 34 },
+    knowledge_cap: 104,
+    knowledge: { base: 3.2, str: 2.4, dex: 1.6, wil: 1.6 }
+  },
+  {
+    name: 'Slashing',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, str: 2.4, dex: 1.8, per: 1.8 }
+  },
+  {
+    name: 'Stabbing',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, str: 2.4, dex: 1.8, per: 1.8 }
+  },
+  {
+    name: 'Two-Handed',
+    class: 'Warrior',
+    factions: ['Free Folk', 'Minions of Sauron', 'Renegades'],
+    exclude_races: ['Númenórean'],
+    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, str: 2.4, con: 1.8, wil: 1.8 }
+  },
 ]

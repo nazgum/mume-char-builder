@@ -1,40 +1,13 @@
 <%- include('../partials/header') %>
 
-<section id="char-setup" class="card">
-  <div id="choose-faction">
-    <label for="faction">Faction:</label>
-    <select id="faction"></select>
-  </div>
 
-  <div id="choose-race">
-    <label for="race">Race:</label>
-    <select id="race"></select>
-  </div>
-
-  <div id="choose-subrace">
-    <label for="subrace">Subrace:</label>
-    <select id="subrace"></select>
-  </div>
-
-  <div id="choose-level">
-    <label for="level">Level:</label>
-    <input type="number" id="level" name="level" min="1" max="100" value="25">
-  </div>
-
-  <div id="choose-pracs">
-    <label for="pracs">Pracs:</label>
-    <span id="pracs">0/0</span>
-  </div>
-</section>
-
-
-<div class="container">
-  <%- include('../partials/statgen') %>
+<main>
+  <%- include('../partials/char_info') %>
   <div id="skills"></div>
-</div>
+  <%- include('../partials/statgen') %>
+</main>
 
 <div id="traits"></div>
-
 
 
 <%- include('../partials/footer') %>

@@ -1,44 +1,78 @@
+html, body {
+  height: 100%;
+  min-width: 1190px;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.side-panel {
+  position: sticky;
+  top: 0;
+  width: 20em;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #e1eef8;
+  padding: 2em;
+}
+
+#char-info {
+  label { display: block; }
+}
+
+#statgen {
+  text-align: center;
+
+  > div { margin-bottom: 0.3em; }
+  input[type="range"] { margin-right: 0.5em; }
+
+  span {
+    width: 16px;
+    display: inline-block;
+    opacity: 0.4;
+  }
+
+  .stat-name { font-weight: bold; }
+  .stat-name span { opacity: 1.0; }
+}
+
+
+#skills {
+  flex: 1;
+  overflow-y: auto;
+  padding: 2em;
+}
+
+@media (max-width: 880px) {
+  main {
+    flex-direction: column;
+  }
+
+  #char-info, #statgen, #skills {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  #char-info { order: 1; }
+  #statgen { order: 2; }
+  #skills { order: 3; }
+
+}
+
+
 .card {
   background: hsla(209, 24%, 78%, 0.21);
   padding: 1em;
   margin: 1em;
 }
 
-#char-setup {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-
-  label { display: block; }
-}
-
 .container {
   display: flex;
 }
 
-#statgen {
-  text-align: center;
-  font-size: 0.8em;
-  span { vertical-align: top; }
-  margin-right: 4em;
-  flex-basis: 300px;
-  flex-grow: 0;
-  flex-shrink: 0;
-
-
-  input[type="range"] { margin-right: 0.5em; }
-
-  span {
-    width: 16px;
-    display: inline-block;
-  }
-}
-
-#skills {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
-  width: 100%;
-}
 
 .skill-group {
   
@@ -87,6 +121,7 @@
 #traits {
   display: inline-grid;
   grid-template-columns: 1fr 1fr 1fr;
+  display: none;
 }
 
 .trait {
