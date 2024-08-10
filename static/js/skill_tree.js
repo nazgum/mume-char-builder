@@ -2,12 +2,52 @@ import { skillsList } from './data/skills_list.js';
 
 export class SkillTree {
   constructor(character) {
-    this.character  = character
-    this.statGen    = character.statGen
-    this.skills_div = document.getElementById('skills');
+    this.character   = character
+    this.statGen     = character.statGen
+    this.classFilter = 'all'
+    this.skills_div  = document.getElementById('skills-list');
+    this.skills_tabs = document.getElementById('skills-tabs');
+
+    // faction btns
+    document.querySelectorAll('#skills-tabs .tab').forEach(tab => {
+      tab.addEventListener('click', (event) => {
+        this.classFilter = event.target.getAttribute('data-class');
+
+        // highlight selected tab
+        document.querySelectorAll('#skills-tabs .tab').forEach(tab => tab.classList.remove('active'));
+        event.target.classList.add('active');
+
+        if (this.classFilter === 'all') {
+          document.querySelectorAll('#skills-list .skill-group').forEach(skillGroup => {
+            skillGroup.classList.remove('hidden');
+          });
+        } else {
+          document.querySelectorAll('#skills-list .skill-group').forEach(skillGroup => {
+            skillGroup.classList.add('hidden')
+            if (skillGroup.getAttribute('data-class') === this.classFilter) {
+              skillGroup.classList.remove('hidden');
+            }
+          });
+        }
+      });
+    });
   }
 
-  updateSkills(faction, race, subrace) {
+  resetTabs() {
+    this.classFilter = 'all'
+    
+    // hide all skill tabs except all by default
+    this.skills_tabs.querySelectorAll('.tab').forEach(tab => {
+      let tab_class = tab.getAttribute('data-class');
+      if (tab_class === 'all') {
+        tab.style.display = 'inline-block';
+      } else {
+        tab.style.display = 'none';
+      }
+    });
+  }
+
+  updateSkills() {
     this.skills_div.innerHTML = '';  // Clear content
 
     // Group skills by class
@@ -19,9 +59,20 @@ export class SkillTree {
       return groups;
     }, {});
 
+    // hide all skill tabs except all by default
+    this.skills_tabs.querySelectorAll('.tab').forEach(tab => {
+      let tab_class = tab.getAttribute('data-class');
+      if (tab_class === 'all') {
+        tab.style.display = 'inline-block';
+      } else {
+        tab.style.display = 'none';
+      }
+    });
+
     for (let [skill_class, skillsList] of Object.entries(skill_groups)) {
       let group_div = document.createElement('div');
       group_div.classList.add('skill-group');
+      group_div.setAttribute('data-class', skill_class);
   
       let title_div = document.createElement('div');
       title_div.classList.add('skill-group-title');
@@ -29,16 +80,22 @@ export class SkillTree {
       group_div.appendChild(title_div);
 
       let avail_skills = skillsList.filter(skill => 
-        skill.factions.includes(faction.name) && !skill.exclude_races.includes(race.name)
+        skill.factions.includes(this.character.faction) && !skill.exclude_races.includes(this.character.race)
       );
 
       if (avail_skills.length === 0) {
         group_div.classList.add('hide');
+      } else {
+        this.skills_tabs.querySelectorAll('.tab').forEach(tab => {
+          let tab_class = tab.getAttribute('data-class');
+          if (tab_class === skill_class) {
+            tab.style.display = 'inline-block';
+          }
+        });
       }
 
       avail_skills.forEach(skill => {
         let skill_div           = document.createElement('div');
-        let skill_content_div   = document.createElement('div');
         let skill_name_div      = document.createElement('div');
         let skill_pracs_div     = document.createElement('div');
         let skill_knowledge_div = document.createElement('div');
@@ -62,7 +119,7 @@ export class SkillTree {
         pracs_input.type = 'number';
         pracs_input.value = 0;
         pracs_input.min = 0;
-        pracs_input.max = skill.pracs[race.name] || skill.pracs.max;
+        pracs_input.max = skill.pracs[this.character.race] || skill.pracs.max;
         
         let pracs_label = document.createElement('span');
         pracs_label.textContent = `/ ${pracs_input.max}`;

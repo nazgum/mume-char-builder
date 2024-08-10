@@ -40,6 +40,7 @@ export class Character {
 
     // Set the first faction as selected and populate races
     this.faction_select.selectedIndex = 0;
+    this.faction = this.faction_select.value;
     this.populateRaces();
   }
 
@@ -55,15 +56,16 @@ export class Character {
 
     // Set the first race as selected and populate subraces
     this.race_select.selectedIndex = 0;
-    this.populateSubraces(faction.races[0].name);
+    this.race = this.race_select.value;
+    this.populateSubraces();
   }
 
-  populateSubraces(race_name) {
+  populateSubraces() {
     this.subrace_select.innerHTML = '';
 
     let faction_name = this.faction;
-    let faction = charInfo.factions.find(f => f.name === faction_name);
-    let race = faction.races.find(r => r.name === race_name);
+    let faction = charInfo.factions.find(f => f.name === this.faction);
+    let race = faction.races.find(r => r.name === this.race);
 
     race.subraces.forEach(subrace => {
       const option = document.createElement('option');
@@ -74,8 +76,9 @@ export class Character {
 
     // Set the first subrace as selected and update traits
     this.subrace_select.selectedIndex = 0;
+    this.subrace = this.subrace_select.value;
 
-    this.skillTree.updateSkills(faction, race, race.subraces[0]);
+    this.skillTree.updateSkills(faction, race);
     this.statGen.updateSkillsKnowledge();
     this.traits.updateTraits(race, race.subraces[0]);
 
@@ -132,7 +135,7 @@ export class Character {
     document.querySelectorAll('#faction-btns button').forEach(button => {
       button.addEventListener('click', (event) => {
         this.faction = event.target.getAttribute('data-faction');
-        this.populateRaces(this.faction);
+        this.populateRaces();
         this.statGen.resetStats();
         
         // Optionally, you can add some visual feedback for the selected button
@@ -142,21 +145,20 @@ export class Character {
     });
 
     this.race_select.addEventListener('change', () => {
-      let selected_race = this.race_select.value;
-      this.populateSubraces(selected_race);
+      this.race = this.race_select.value;
+      this.populateSubraces();
       this.statGen.resetStats();
     });
 
     this.subrace_select.addEventListener('change', () => {
-      let selected_race    = this.race_select.value;
-      let selected_subrace = this.subrace_select.value;
+      this.subrace = this.subrace_select.value;
 
       let faction = charInfo.factions.find(f => f.name === this.faction);
-      let race = faction.races.find(r => r.name === selected_race);
-      let subrace = race.subraces.find(sr => sr.name === selected_subrace);
+      let race = faction.races.find(r => r.name === this.race);
+      let subrace = race.subraces.find(sr => sr.name === this.subrace);
 
       if (faction && race && subrace) {
-        this.skillTree.updateSkills(faction, race, subrace);
+        this.skillTree.updateSkills();
         this.statGen.updateSkillsKnowledge();
         this.traits.updateTraits(race, subrace);
         this.statGen.resetStats();
@@ -164,7 +166,6 @@ export class Character {
     });
 
     this.level_input.addEventListener('change', (event) => {
-      console.log("level changed")
       this.updateMaxPracs();
     });
 

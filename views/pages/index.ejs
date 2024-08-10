@@ -3,7 +3,26 @@
 
 <main>
   <%- include('../partials/char_info') %>
-  <div id="skills"></div>
+  <div id="skills">
+    <div id="skills-top"><div>
+      <span class="float-right">
+        <span id="pracs">25/25</span> Pracs
+      </span>
+
+      <div id="skills-tabs" class="tabs">
+        <span class="tab active" data-class="all">All</span>
+        <span class="tab" data-class="Ranger">Ranger</span>
+        <span class="tab" data-class="Thief">Thief</span>
+        <span class="tab" data-class="Warrior">Warrior</span>
+        <span class="tab" data-class="Mage">Mage</span>
+        <span class="tab" data-class="Priest">Priest</span>
+        <span class="tab" data-class="Shaman" style="display: none">Shaman</span>
+      </div>
+
+      
+    </div></div>
+    <div id="skills-list"></div>
+  </div>
   <%- include('../partials/statgen') %>
 </main>
 
