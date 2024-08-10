@@ -7,6 +7,7 @@ export class StatGen {
     this.initialStats = { str: 8, int: 8, wis: 8, dex: 8, con: 8, wil: 8, per: 8 };
     this.availablePoints = 175;
     this.raceModifiers = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
+    this.pointsSpent = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
 
     this.addResetButtonListener();
   }
@@ -33,27 +34,29 @@ export class StatGen {
   }
 
   updateStats(raceStats) {
-    this.raceModifiers = raceStats; // Update the race modifiers
+    this.raceModifiers = raceStats;
+
     for (let stat in this.initialStats) {
-      const baseValue = this.initialStats[stat] + this.raceModifiers[stat];
-      const statInput = document.getElementById(stat);
-      statInput.value = baseValue;
+      let baseValue = this.initialStats[stat] + this.raceModifiers[stat];
+      let statInput = document.getElementById(stat);
       statInput.min = baseValue;
       statInput.max = baseValue + 10;
+      statInput.value = baseValue + this.pointsSpent[stat];
 
-      document.getElementById(`${stat}-current`).textContent = baseValue;
-      document.getElementById(`${stat}-min`).textContent = baseValue;
-      document.getElementById(`${stat}-max`).textContent = baseValue + 10;
+      document.getElementById(`${stat}-min`).textContent = statInput.min;
+      document.getElementById(`${stat}-max`).textContent = statInput.max;
+      document.getElementById(`${stat}-current`).textContent = statInput.value;
 
     }
     this.updateAvailablePoints();
+    this.updateSkillsKnowledge();
   }
 
   updateAvailablePoints() {
     let usedPoints = 0;
     for (let stat in this.initialStats) {
-      const baseValue = this.initialStats[stat] + this.raceModifiers[stat];
-      const currentValue = parseInt(document.getElementById(stat).value) || baseValue;
+      let baseValue = this.initialStats[stat] + this.raceModifiers[stat];
+      let currentValue = parseInt(document.getElementById(stat).value) || baseValue;
       usedPoints += this.getStatCost(baseValue, currentValue);
     }
     this.availablePoints = 175 - usedPoints; // Update available points
@@ -133,14 +136,14 @@ export class StatGen {
         statInput.value = value;
         this.updateAvailablePoints();
 
-        console.log("avail points: ", this.availablePoints);
-
+        // if cannot afford stat, reduce stat til have enough points to get it
         while (this.availablePoints < 0) {
-          console.log("reducing stat til points >= 0")
           value -= 1
           statInput.value = value; 
           this.updateAvailablePoints();
         }
+
+        this.pointsSpent[stat] = value - baseValue;
 
         this.updateSkillsKnowledge();
 
@@ -150,11 +153,14 @@ export class StatGen {
   }
 
   resetStats() {
+    this.pointsSpent = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
+
     for (let stat in this.initialStats) {
       const baseValue = this.initialStats[stat] + this.raceModifiers[stat];
       const statInput = document.getElementById(stat);
       statInput.value = baseValue;
     }
+
     this.updateAvailablePoints();
     this.updateSkillsKnowledge();
   }
