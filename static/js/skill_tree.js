@@ -35,7 +35,7 @@ export class SkillTree {
 
   resetTabs() {
     this.classFilter = 'all'
-    
+
     // hide all skill tabs except all by default
     this.skills_tabs.querySelectorAll('.tab').forEach(tab => {
       let tab_class = tab.getAttribute('data-class');
@@ -97,22 +97,27 @@ export class SkillTree {
       avail_skills.forEach(skill => {
         let skill_div           = document.createElement('div');
         let skill_name_div      = document.createElement('div');
+        let skill_stats_div     = document.createElement('div');
         let skill_pracs_div     = document.createElement('div');
         let skill_knowledge_div = document.createElement('div');
 
         skill_div.classList.add('skill');
         skill_div.setAttribute('data-class', skill.class);
+
         skill_name_div.classList.add('skill-name');
+        skill_stats_div.classList.add('skill-stats');
         skill_pracs_div.classList.add('skill-pracs');
         skill_knowledge_div.classList.add('skill-knowledge');
 
         skill_div.appendChild(skill_name_div);
+        skill_div.appendChild(skill_stats_div);
         skill_div.appendChild(skill_pracs_div);
         skill_div.appendChild(skill_knowledge_div);
 
-
         skill_div.dataset.skillName = skill.name;
         skill_name_div.textContent = skill.name;
+
+        skill_stats_div.textContent = this.skillStats(skill);
 
         let pracs_input = document.createElement('input');
         pracs_input.classList.add('pracs-input');
@@ -156,6 +161,12 @@ export class SkillTree {
 
       this.skills_div.appendChild(group_div);
     }
+  }
+
+  skillStats(skill) {
+    let keys = Object.keys(skill.knowledge); // Get all keys from the object
+    let statKeys = keys.filter(key => key !== 'base');
+    return statKeys.map(key => key.toUpperCase()).join(' + ');
   }
 
   enforcePracLimits(pracs_input) {

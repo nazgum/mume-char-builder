@@ -1,0 +1,15 @@
+#traits {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  display: none;
+}
+
+.trait {
+  background: hsla(209, 24%, 78%, 0.21);
+  padding: 1em;
+  margin: 1em;
+  font-size: 0.8em;
+
+  h4 { margin: 0; display: none; }
+  p { margin: 0; }
+}

@@ -1,6 +1,49 @@
-body {
+html, body {
+  height: 100%;
+  min-width: 1190px;
+  font-size: 16px;
+
+  background-color: #faf4ed;
+}
+
+main {
+  display: flex;
+  height: 100vh;
+}
+
+.side-panel {
+  position: sticky;
+  top: 0;
+  width: 20em;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: #e1eef8;
+  padding: 2em;
+}
+
+#skills {
+  flex: 1;
+  overflow-y: auto;
 }
 
 
-.hide { display: none; }
-.hidden { display: none; }
+@media (max-width: 880px) {
+  main {
+    flex-direction: column;
+  }
+
+  #char-info, #statgen, #skills {
+    position: static;
+    width: 100%;
+    height: auto;
+  }
+
+  #char-info { order: 1; }
+  #statgen { order: 2; }
+  #skills { order: 3; }
+
+}
+
+.container {
+  display: flex;
+}
