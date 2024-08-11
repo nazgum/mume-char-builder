@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   min-width: 1210px;
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
 
   background-color: var(--base);
   color: var(--text);
@@ -16,7 +16,7 @@ main {
 .side-panel {
   position: sticky;
   top: 0;
-  width: 340px;  /* 20em */
+  width: 21em;
   height: 100vh;
   overflow-y: hidden;
   background-color: var(--crust);
