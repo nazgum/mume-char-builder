@@ -1,12 +1,11 @@
 #skills-top {
   position: sticky;
   top: 0;
-  background-color: white;
+  background-color: var(--mantle);
   z-index: 10;
   display: flex;
   gap: 0.5em;
   padding: 0.5em;
-  border-bottom: 1px solid #ccc;
   padding-top: 1em;
   padding-bottom: 0;
 
@@ -16,14 +15,15 @@
   .tab {
     padding: 5px 10px;
     cursor: pointer;
-    border: 1px solid #ccc;
-    background-color: #f9f9f9;
+    background-color: var(--crust);
     border-top-left-radius: 0.3em;
     border-top-right-radius: 0.3em;
     display: inline-block;
-    margin-bottom: -1px;
+    border-bottom: 2px solid transparent;
 
-    &.active { font-weight: bold; }
+
+    &.active { font-weight: bold; background-color: var(--surface0); }
+    &:hover { border-bottom-color: var(--surface2); }
   }
 }
 
@@ -31,7 +31,7 @@
   padding: 2em;
   
   .skill-group {
-    border: 1px solid #d2d3c3;
+    border: 1px solid var(--surface0);
     border-radius: 0.3em;
     margin-bottom: 1em;
 
@@ -39,14 +39,14 @@
       /*grid-column: span 2;*/
       font-weight: bold;
       padding: 0.5em 0.8em;
-      background-color: hsla(50, 32%, 89%, 0.21)
+      background-color: var(--crust);
     }
     
     .skill {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px solid #d2d3c3;
+      border-top: 1px solid var(--surface0);
       padding: 0.5em 0.8em;
       /*padding: 6px 12px;
       border: 1px solid #ccc;
@@ -76,12 +76,22 @@
       display: flex;
       align-items: center;
     
-      input { margin-right: 0.5em; max-width: 3em; }
+      input { 
+        margin-right: 0.5em; 
+        max-width: 3em; 
+        text-align: center;
+      }
     }
     
     .skill-knowledge {
       margin-left: 2em;
     }
     
+  }
+}
+
+html[data-theme="dark"] {
+  #skills-list input[type="number"] {
+    max-width: 2em;
   }
 }

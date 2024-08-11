@@ -1,5 +1,11 @@
 #char-info {
-  label { display: block; }
+  position: relative;
+  label { 
+    display: block;
+    text-transform: uppercase;
+    opacity: 0.7;
+    font-size: 0.8em;
+  }
 
   h1 { font-size: 2em; line-height: 1; margin-top: 1em; }
   h3 { font-size: 1.5em; }
@@ -8,10 +14,6 @@
 
   > div { margin-bottom: 1em; }
 
-  select {
-    padding: 0.2em 0.6em;
-  }
-
   #faction-btns {
     display: inline-flex;
     flex-direction: row;
@@ -19,8 +21,15 @@
     /*margin: 0 .25em 0 0;*/  
 
     button {
-      border: 1px solid #888;
+      background-color: var(--surface0);
+      color: var(--text);
       padding: 0.2em 0.6em;
+      padding: 5px 10px;
+      cursor: pointer;
+      display: inline-block;
+      border: 0;
+      border-bottom: 2px solid transparent;
+
       cursor: pointer;
 
       &:first-child {
@@ -36,12 +45,26 @@
         border-right: 0;
       }
       &:hover {
-        opacity: 0.75;
+        border-bottom-color: var(--overlay1);
+      }
+      &.selected {
+        font-weight: bold;
+        background-color: var(--surface1);
       }
     }
-
-    button.selected {
-      font-weight: bold;
-    }
   }
+
+  select {
+    width: 50%;
+  }
+
+  #level {
+    background: var(--surface1);
+    color: var(--text);
+    padding: 0.4em 0.8em;
+    border-radius: 0.3em;
+    width: 50%;
+  }
+
+  svg { position: absolute; bottom: 2em; left: 2em; cursor: pointer; }
 }

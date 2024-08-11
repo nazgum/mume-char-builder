@@ -148,7 +148,13 @@ export class SkillTree {
 
         group_div.appendChild(skill_div);
 
-        pracs_input.addEventListener('input', () => {
+        pracs_input.addEventListener('change', () => {
+          this.enforcePracLimits(pracs_input);
+          this.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
+          this.character.updateAvailPracs();
+        });
+    
+        pracs_input.addEventListener('blur', () => {
           this.enforcePracLimits(pracs_input);
           this.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
           this.character.updateAvailPracs();

@@ -7,9 +7,11 @@
   span {
     width: 16px;
     display: inline-block;
-    opacity: 0.4;
+    color: var(--sub-text0);
   }
 
   .stat-name { font-weight: bold; }
-  .stat-name span { opacity: 1.0; }
+  .stat-name span { color: var(--text); }
+
+  button { margin-top: 0.5em; }
 }

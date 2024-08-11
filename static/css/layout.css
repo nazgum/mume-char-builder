@@ -3,7 +3,8 @@ html, body {
   min-width: 1190px;
   font-size: 16px;
 
-  background-color: #faf4ed;
+  background-color: var(--base);
+  color: var(--text);
 }
 
 main {
@@ -17,7 +18,7 @@ main {
   width: 20em;
   height: 100vh;
   overflow-y: hidden;
-  background-color: #e1eef8;
+  background-color: var(--crust);
   padding: 2em;
 }
 
@@ -47,3 +48,4 @@ main {
 .container {
   display: flex;
 }
+

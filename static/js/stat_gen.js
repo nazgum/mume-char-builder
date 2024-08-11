@@ -153,6 +153,8 @@ export class StatGen {
   }
 
   resetStats() {
+    console.log("reset stats");
+    
     this.pointsSpent = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
 
     for (let stat in this.initialStats) {

@@ -1,5 +1,7 @@
 import { Character } from './character.js';
+import { Moon } from './moon.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  let char = new Character();
+  new Character();
+  new Moon();
 });
