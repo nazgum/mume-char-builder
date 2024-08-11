@@ -1,4 +1,3 @@
-import { Character } from './character.js';
 import { skillsList } from './data/skills_list.js';
 
 export class StatGen {
@@ -10,6 +9,7 @@ export class StatGen {
     this.pointsSpent = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
 
     this.addResetButtonListener();
+    this.addStatInputListeners();
   }
 
   getStatCost(baseValue, currentValue) {

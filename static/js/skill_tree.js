@@ -2,12 +2,12 @@ import { skillsList } from './data/skills_list.js';
 
 export class SkillTree {
   constructor(character) {
-    this.character   = character
-    this.statGen     = character.statGen
-    this.classFilter = 'all'
-    this.pracsSpent  = {}
-    this.skills_div  = document.getElementById('skills-list');
-    this.skills_tabs = document.getElementById('skills-tabs');
+    this.character       = character
+    this.statGen         = character.statGen
+    this.classFilter     = 'all'
+    this.pracsSpent      = {}
+    this.skills_div      = document.getElementById('skills');
+    this.skills_tabs     = document.getElementById('skills-tabs');
 
     // faction btns
     document.querySelectorAll('#skills-tabs .tab').forEach(tab => {
@@ -49,7 +49,13 @@ export class SkillTree {
   }
 
   updateSkills() {
-    this.skills_div.innerHTML = '';  // Clear content
+    //this.skills_div.innerHTML = '';  // Clear content
+    let old_skills_list = document.getElementById('skills-list');
+    this.skills_div.removeChild(old_skills_list);
+
+    let new_skills_list = document.createElement('div');
+    new_skills_list.setAttribute('id', 'skills-list');
+    this.skills_div.appendChild(new_skills_list);
 
     // Group skills by class
     let skill_groups = skillsList.reduce((groups, skill) => {
@@ -169,7 +175,7 @@ export class SkillTree {
         });
       });
 
-      this.skills_div.appendChild(group_div);
+      new_skills_list.appendChild(group_div);
     }
   }
 

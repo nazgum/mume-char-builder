@@ -6,16 +6,25 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: [],
-    pracs: { max: 27, Tarkhnarb: 18, Zaugurz: 18, Troll: 11, Númenórean: 27 },
+    pracs: { max: 27, Orc: 18, Troll: 11, Númenórean: 27 },
     knowledge_cap: 152,
     knowledge: { base: 20, per: 3.75, int: 2.6 }
   },
   {
     name: 'Bandage',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Troll'],
-    pracs: { max: 18, Tarkhnarb: 8, Zaugurz: 18, Númenórean: 18 },
+    pracs: { max: 18, Orc: 8, Númenórean: 18 },
+    knowledge_cap: 152,
+    knowledge: { base: 18, int: 3.75, dex: 2.5 }
+  },
+  {
+    name: 'Bandage',
+    class: 'Ranger',
+    factions: ['Renegades'],
+    exclude_races: [],
+    pracs: { max: 18 },
     knowledge_cap: 152,
     knowledge: { base: 18, int: 3.75, dex: 2.5 }
   },
@@ -24,7 +33,7 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: [],
-    pracs: { max: 13, Tarkhnarb: 13, Zaugurz: 13, Troll: 3, Númenórean: 13 },
+    pracs: { max: 13, Orc: 13, Troll: 3, Númenórean: 13 },
     knowledge_cap: 152,
     knowledge: { base: 18, dex: 3, wil: 2, str: 1.25 }
   },
@@ -33,7 +42,7 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Troll'],
-    pracs: { max: 27, Tarkhnarb: 18, Númenórean: 27 },
+    pracs: { max: 27, Orc: 18, Númenórean: 27 },
     knowledge_cap: 152,
     knowledge: { base: 17, wil: 4.0, int: 3.5 }
   },
@@ -51,7 +60,7 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: [],
-    pracs: { max: 27, Tarkhnarb: 18, Zaugurz: 18, Troll: 11, Númenórean: 27 },
+    pracs: { max: 27, Orc: 18, Troll: 11, Númenórean: 27 },
     knowledge_cap: 152,
     knowledge: { base: 17, wil: 4.0, wis: 3.5 }
   },
@@ -60,7 +69,7 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Troll'],
-    pracs: { max: 13, Tarkhnarb: 13, Númenórean: 13 },
+    pracs: { max: 13, Orc: 13, Númenórean: 13 },
     knowledge_cap: 152,
     knowledge: { base: 18, dex: 3.75, wil: 2.5 },
   },
@@ -69,7 +78,7 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: [],
-    pracs: { max: 14, Tarkhnarb: 13, Zaugurz: 13, Troll: 3, Númenórean: 13 },
+    pracs: { max: 14, Orc: 13, Troll: 3, Númenórean: 13 },
     knowledge_cap: 152,
     knowledge: { base: 16, con: 3, wil: 2, dex: 1.3 }
   },
@@ -78,7 +87,7 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: [],
-    pracs: { max: 27, Tarkhnarb: 27, Zaugurz: 27, Troll: 27, Númenórean: 27 },
+    pracs: { max: 27 },
     knowledge_cap: 152,
     knowledge: { base: 16.9, int: 2.5, per: 3.8 }
   },
@@ -87,7 +96,7 @@ export const skillsList = [
     class: 'Ranger',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: [],
-    pracs: { max: 27, Tarkhnarb: 27, Zaugurz: 27, Troll: 27, Númenórean: 27 },
+    pracs: { max: 27 },
     knowledge_cap: 152,
     knowledge: { base: 0, str: 3.6, wil: 4.85 }
   },
@@ -98,7 +107,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16, Tarkhnarb: 16, Zaugurz: 16 },
+    pracs: { max: 16 },
     knowledge_cap: 114,
     knowledge: { base: 15, dex: 3.0, wil: 2.5 }
   },
@@ -107,7 +116,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
-    pracs: { max: 23, Tarkhnarb: 23, Zaugurz: 23, Númenórean: 23 },
+    pracs: { max: 23 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -116,7 +125,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
-    pracs: { max: 23, Tarkhnarb: 23, Zaugurz: 23, Númenórean: 18 },
+    pracs: { max: 23, Númenórean: 18 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -125,7 +134,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
-    pracs: { max: 23, Tarkhnarb: 23, Zaugurz: 23, Númenórean: 23 },
+    pracs: { max: 23 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, int: 2.5 }
   },
@@ -134,7 +143,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: [],
-    pracs: { max: 16, Tarkhnarb: 16, Zaugurz: 16, Troll: 8, Númenórean: 13 },
+    pracs: { max: 16, Troll: 8, Númenórean: 13 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -143,7 +152,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
-    pracs: { max: 16, Tarkhnarb: 16, Zaugurz: 16, Númenórean: 16 },
+    pracs: { max: 16 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -152,16 +161,34 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
-    pracs: { max: 16, Tarkhnarb: 16, Zaugurz: 16, Númenórean: 5 },
+    pracs: { max: 16, Númenórean: 5 },
     knowledge_cap: 114,
     knowledge: { base: 15, dex: 3.0, per: 2.5 }
   },
   {
     name: 'Pick',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 16 },
+    knowledge_cap: 109,
+    knowledge: { base: 10, dex: 3.0, int: 2.5 }
+  },
+  {
+    name: 'Pick',
+    class: 'Thief',
+    factions: ['Sauron'],
     exclude_races: ['Troll'],
-    pracs: { max: 16, Tarkhnarb: 8, Zaugurz: 6, Númenórean: 5 },
+    pracs: { max: 16, Orc: 8, Númenórean: 5 },
+    knowledge_cap: 109,
+    knowledge: { base: 10, dex: 3.0, int: 2.5 }
+  },
+  {
+    name: 'Pick',
+    class: 'Thief',
+    factions: ['Renegades'],
+    exclude_races: [],
+    pracs: { max: 16, Orc: 6 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, int: 2.5 }
   },
@@ -170,16 +197,25 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16, Tarkhnarb: 16, Zaugurz: 16 },
+    pracs: { max: 16 },
     knowledge_cap: 114,
     knowledge: { base: 10.5, dex: 2.5, per: 1.75, str: 1.5 }
   },
   {
     name: 'Search',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Free Folk', 'Sauron'],
     exclude_races: [],
-    pracs: { max: 16, Tarkhnarb: 3, Zaugurz: 4, Troll: 1, Númenórean: 5 },
+    pracs: { max: 16, Orc: 3, Troll: 1, Númenórean: 5 },
+    knowledge_cap: 109,
+    knowledge: { base: 10, dex: 3.0, per: 2.5 }
+  },
+  {
+    name: 'Search',
+    class: 'Thief',
+    factions: ['Renegades'],
+    exclude_races: [],
+    pracs: { max: 16, Orc: 4 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -188,7 +224,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
-    pracs: { max: 23, Tarkhnarb: 23, Zaugurz: 23, Númenórean: 23 },
+    pracs: { max: 23 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -197,7 +233,7 @@ export const skillsList = [
     class: 'Thief',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
-    pracs: { max: 23, Tarkhnarb: 23, Zaugurz: 23, Númenórean: 23 },
+    pracs: { max: 23 },
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -208,7 +244,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 43, Tarkhnarb: 43, Zaugurz: 43, Troll: 40 },
+    pracs: { max: 43, Orc: 43, Troll: 40 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
   },
@@ -217,7 +253,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean', 'Troll'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29 },
+    pracs: { max: 29 },
     knowledge_cap: 114,
     knowledge: { base: 6, dex: 2.4, str: 1.8, wil: 1.8 }
   },
@@ -226,7 +262,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, dex: 1.8, wil: 1.8 }
   },
@@ -235,7 +271,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, con: 1.8, wil: 1.8 }
   },
@@ -244,7 +280,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 58, Tarkhnarb: 58, Zaugurz: 58, Troll: 58 },
+    pracs: { max: 58 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
   },
@@ -253,7 +289,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
   },
@@ -262,16 +298,25 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
     knowledge: { base: 6, dex: 2.4, per: 1.8, str: 1.8 }
   },
   {
     name: 'Rescue',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 21, Tarkhnarb: 10, Zaugurz: 21, Troll: 8 },
+    pracs: { max: 21, Orc: 10, Troll: 8 },
+    knowledge_cap: 114,
+    knowledge: { base: 6, dex: 3.0, wil: 2.0, str: 1.0 }
+  },
+  {
+    name: 'Rescue',
+    class: 'Warrior',
+    factions: ['Renegades'],
+    exclude_races: [],
+    pracs: { max: 21 },
     knowledge_cap: 114,
     knowledge: { base: 6, dex: 3.0, wil: 2.0, str: 1.0 }
   },
@@ -280,7 +325,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Sauron'],
     exclude_races: ['Orc', 'Númenórean'],
-    pracs: { max: 34, Troll: 34 },
+    pracs: { max: 34 },
     knowledge_cap: 104,
     knowledge: { base: 3.2, str: 2.4, dex: 1.6, wil: 1.6 }
   },
@@ -289,7 +334,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, dex: 1.8, per: 1.8 }
   },
@@ -298,7 +343,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, dex: 1.8, per: 1.8 }
   },
@@ -307,7 +352,7 @@ export const skillsList = [
     class: 'Warrior',
     factions: ['Free Folk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
-    pracs: { max: 29, Tarkhnarb: 29, Zaugurz: 29, Troll: 23 },
+    pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, con: 1.8, wil: 1.8 }
   },

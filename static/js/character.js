@@ -1,13 +1,11 @@
 import { charInfo } from './data/char_info.js';
 import { StatGen } from './stat_gen.js';
 import { SkillTree } from './skill_tree.js';
-import { Traits } from './traits.js';
 
 export class Character {
   constructor() {
     this.statGen        = new StatGen(this);
     this.skillTree      = new SkillTree(this);
-    this.traits         = new Traits();
     this.pracs_avail    = 0;
     this.pracs_max      = 0;
     this.pracs_spent    = {};
@@ -25,6 +23,7 @@ export class Character {
     this.pracs_max_span   = document.getElementById('pracs-max');
 
     this.setupListeners();
+    this.skillTree.updateSkills();
     this.populateRaces();
     this.statGen.resetStats();
     this.updateMaxPracs();
@@ -45,7 +44,13 @@ export class Character {
   }
 
   populateRaces() {
-    this.race_select.innerHTML = '';
+    let choose_race_div = document.getElementById('choose-race');
+    choose_race_div.removeChild(this.race_select);
+    this.race_select = document.createElement('select');
+    this.race_select.setAttribute('id', 'race');
+    choose_race_div.appendChild(this.race_select);
+    //this.race_select.innerHTML = '';
+
     let faction = charInfo.factions.find(f => f.name === this.faction);
     faction.races.forEach(race => {
       let option = document.createElement('option');
@@ -64,7 +69,13 @@ export class Character {
     let faction = charInfo.factions.find(f => f.name === this.faction);
     let race = faction.races.find(r => r.name === this.race);
 
-    this.subrace_select.innerHTML = '';
+    let choose_subrace_div = document.getElementById('choose-subrace');
+    choose_subrace_div.removeChild(this.subrace_select);
+    this.subrace_select = document.createElement('select');
+    this.subrace_select.setAttribute('id', 'subrace');
+    choose_subrace_div.appendChild(this.subrace_select);
+    //this.subrace_select.innerHTML = '';
+
 
     race.subraces.forEach(subrace => {
       let option = document.createElement('option');
@@ -73,16 +84,14 @@ export class Character {
       this.subrace_select.appendChild(option);
     });
 
-    // Set the first subrace as selected and update traits
+    // Set the first subrace as selected
     this.subrace_select.selectedIndex = 0;
     this.subrace = this.subrace_select.value;
 
     this.skillTree.updateSkills(faction, race);
     this.statGen.updateSkillsKnowledge();
-    this.traits.updateTraits(race, race.subraces[0]);
 
     this.statGen.updateStats(race.stats); // Update stats based on the selected race
-    this.statGen.addStatInputListeners(race.stats); // Add listeners for stat inputs
     this.updateMaxPracs();
   }
 
@@ -156,7 +165,6 @@ export class Character {
 
       if (faction && race && subrace) {
         this.skillTree.updateSkills();
-        this.traits.updateTraits(race, subrace);
         this.statGen.updateStats(race.stats);
       }
     });
