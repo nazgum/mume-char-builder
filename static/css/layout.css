@@ -16,7 +16,7 @@ main {
 .side-panel {
   position: sticky;
   top: 0;
-  width: 20em;
+  width: 340px;  /* 20em */
   height: 100vh;
   overflow-y: hidden;
   background-color: var(--crust);
