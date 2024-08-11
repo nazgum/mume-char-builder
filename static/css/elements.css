@@ -15,6 +15,7 @@ select {
   color: var(--text);
   border: 0;
   border-radius: 0.3em;
+  cursor: pointer;
 }
 
 input:focus {
@@ -26,6 +27,10 @@ input[type="number"] {
   border: 0;
   background: var(--mantle);
   color: inherit;
+}
+
+input[type="range"] {
+  cursor: pointer;
 }
 
 html[data-theme="dark"] {
