@@ -282,7 +282,7 @@ export const skillsList = [
     exclude_races: ['Númenórean'],
     pracs: { max: 58 },
     knowledge_cap: 114,
-    knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
+    knowledge: { base: 6, con: 3.4, wil: 2.6 }
   },
   {
     name: 'Kick',
