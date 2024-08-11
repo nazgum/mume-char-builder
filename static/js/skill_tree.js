@@ -5,6 +5,7 @@ export class SkillTree {
     this.character   = character
     this.statGen     = character.statGen
     this.classFilter = 'all'
+    this.pracsSpent  = {}
     this.skills_div  = document.getElementById('skills-list');
     this.skills_tabs = document.getElementById('skills-tabs');
 
@@ -121,6 +122,7 @@ export class SkillTree {
 
         let pracs_input = document.createElement('input');
         pracs_input.classList.add('pracs-input');
+        pracs_input.setAttribute('data-class', skill.class);
         pracs_input.type = 'number';
         pracs_input.value = 0;
         pracs_input.min = 0;
@@ -150,13 +152,15 @@ export class SkillTree {
 
         pracs_input.addEventListener('change', () => {
           this.enforcePracLimits(pracs_input);
-          this.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
+          this.updatePracsSpent();
+          this.updateKnowledge();
           this.character.updateAvailPracs();
         });
     
         pracs_input.addEventListener('blur', () => {
           this.enforcePracLimits(pracs_input);
-          this.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
+          this.updatePracsSpent();
+          this.updateKnowledge();
           this.character.updateAvailPracs();
         });
 
@@ -185,35 +189,97 @@ export class SkillTree {
     }
   }
 
-  updateKnowledge(pracs_spent, pracs_max, knowledge_span, knowledge_max_span) {
-    pracs_spent   = parseInt(pracs_spent);
-    pracs_max     = parseInt(pracs_max);
-    let knowledge_max = parseInt(knowledge_max_span.textContent);
-    let knowledge_current = knowledge_max/pracs_max * pracs_spent;
+  updatePracsSpent() {
+    this.pracsSpent = {};
 
-    // Weights: first prac worth 3x, last prac worth 1/3x
-    let start_weight = 3;
-    let end_weight = 1 / 3;
-    let weight_decrement = (start_weight - end_weight) / (pracs_max - 1);
+    let pracsInputs = this.skills_div.querySelectorAll('.pracs-input');
 
-    let total_weight = 0;
-    let current_weight = start_weight;
+    pracsInputs.forEach(input => {
+        let skill_class  = input.getAttribute('data-class');
+        let pracs_amount = parseInt(input.value) || 0;
 
-    for (let i = 1; i <= pracs_spent; i++) {
-      total_weight += current_weight;
-      current_weight -= weight_decrement;
-    }
+        if (!this.pracsSpent[skill_class]) {
+            this.pracsSpent[skill_class] = 0;
+        }
 
-    let max_total_weight = 0;
-    current_weight = start_weight;
-    for (let i = 1; i <= pracs_max; i++) {
-      max_total_weight += current_weight;
-      current_weight -= weight_decrement;
-    }
+        this.pracsSpent[skill_class] += pracs_amount;
+    });
 
-    knowledge_current = (total_weight / max_total_weight) * knowledge_max;
-    knowledge_current = Math.round(knowledge_current);
+    console.log(this.pracsSpent);
+  }
 
-    knowledge_span.textContent = `${knowledge_current}%`;
+  calcMultiClass(pracs_input, knowledge_current) {
+    //let total_pracs = 0
+    let skill_class = pracs_input.getAttribute('data-class');
+
+    // Iterate over pracsSpent object
+    /*for (let [class_name, pracs] of Object.entries(this.pracsSpent)) {
+      // Exclude pracs for "Ranger" and the current class
+      if (class_name !== "Ranger" && class_name !== skill_class) {
+          total_pracs += pracs;
+      }
+    }*/
+    // Precompute total pracs outside of the loop
+    let total_pracs = Object.entries(this.pracsSpent).reduce((total, [class_name, pracs]) => {
+      if (class_name !== "Ranger" && class_name !== skill_class) {
+        return total + pracs;
+      }
+      return total;
+    }, 0);
+
+    // Calculate the total drop using a fixed weight of 0.1
+    let drop = total_pracs * 0.1;
+    
+    // Apply the drop and enforce the minimum cap
+    let max_drop = 25;
+    let min_knowledge = Math.max(0, Math.round(knowledge_current - max_drop));
+    let knowledge = Math.round(knowledge_current - drop);
+
+    return Math.max(knowledge, min_knowledge);
+  }
+
+  updateKnowledge() {
+    console.log("update knowledge");
+
+    let skillElements = document.querySelectorAll('.skill');
+    skillElements.forEach(skillElement => {
+      let pracs_input = skillElement.querySelector('.pracs-input');
+      let knowledge_span = skillElement.querySelector('.knowledge-value');
+      let knowledge_max_span = skillElement.querySelector('.knowledge-max');
+
+      let pracs_spent   = parseInt(pracs_input.value);
+      let pracs_max     = parseInt(pracs_input.max);
+      let knowledge_max = parseInt(knowledge_max_span.textContent);
+      let knowledge_current = knowledge_max/pracs_max * pracs_spent;
+
+      // Weights: first prac worth 3x, last prac worth 1/3x
+      let start_weight = 3;
+      let end_weight = 1 / 3;
+      let weight_decrement = (start_weight - end_weight) / (pracs_max - 1);
+
+      let total_weight = 0;
+      let current_weight = start_weight;
+
+      for (let i = 1; i <= pracs_spent; i++) {
+        total_weight += current_weight;
+        current_weight -= weight_decrement;
+      }
+
+      let max_total_weight = 0;
+      current_weight = start_weight;
+      for (let i = 1; i <= pracs_max; i++) {
+        max_total_weight += current_weight;
+        current_weight -= weight_decrement;
+      }
+
+      knowledge_current = (total_weight / max_total_weight) * knowledge_max;
+      knowledge_current = Math.round(knowledge_current);
+
+      if (pracs_input.getAttribute('data-class') !== 'Ranger') {
+        knowledge_current = this.calcMultiClass(pracs_input, knowledge_current);
+      }
+
+      knowledge_span.textContent = `${knowledge_current}%`;
+    });
   }
 }

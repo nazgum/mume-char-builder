@@ -114,7 +114,7 @@ export class StatGen {
       let knowledge_span = skillElement.querySelector('.knowledge-value');
       let knowledge_max_span = skillElement.querySelector('.knowledge-max');
 
-      this.character.skillTree.updateKnowledge(pracs_input.value, pracs_input.max, knowledge_span, knowledge_max_span);
+      this.character.skillTree.updateKnowledge(pracs_input, knowledge_span, knowledge_max_span);
     });
   }
 
