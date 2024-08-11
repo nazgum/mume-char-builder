@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Signika';
   src: url('/fonts/Signika-SemiBold.woff2') format('woff2');
-  font-weight: normal;
   font-style: normal;
+  font-weight: 600;
 }
 
 body {
