@@ -82,7 +82,7 @@
     text-decoration: none;
     line-height: 1.3;
 
-    svg { display: inline; }
+    svg { display: inline; fill: currentColor; }
     span { margin-left: 0.3em; }
   }
 }
