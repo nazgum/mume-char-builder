@@ -98,6 +98,11 @@ export class Character {
         pracs = (10 * 25) + Math.floor((level - 25) / 1.7);
       }
     }
+
+    if (this.subrace == 'Eriadorian') {
+      pracs += 5;
+    }
+
     return pracs;
   }
 
@@ -154,6 +159,7 @@ export class Character {
       if (faction && race && subrace) {
         this.skillTree.updateSkills();
         this.statGen.updateStats(race.stats);
+        this.updateMaxPracs();
       }
     });
 
