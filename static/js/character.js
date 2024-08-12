@@ -89,7 +89,7 @@ export class Character {
       if (level <= 25) {
         pracs = 11 * level;
       } else {
-        pracs = (11 * 25) + Math.floor((level - 25) / 1.4);
+        pracs = (11 * 25) + Math.floor((level - 25) / 1.42);
       }
     } else {
       if (level <= 25) {
