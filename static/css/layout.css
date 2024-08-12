@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  min-width: 1150px;
+  /*min-width: 1150px;*/
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
 
@@ -9,8 +9,11 @@ html, body {
 }
 
 main {
-  display: flex;
-  height: 100vh;
+  display: grid;
+  grid-template-columns: 21em 1fr 21em;
+  grid-template-rows: 100vh;
+  grid-template-areas: 
+    "char-info skills statgen";
 }
 
 .side-panel {
@@ -23,30 +26,59 @@ main {
   padding: 1.5em;
 }
 
-#skills {
-  flex: 1;
-  overflow-y: auto;
-}
+#char-info { grid-area: char-info; }
+#skills { grid-area: skills; overflow-y: auto; }
+#statgen { grid-area: statgen; }
 
 
-@media (max-width: 880px) {
+/* tablets */
+/* For screens between 650px and 1150px */
+@media (max-width: 1150px) and (min-width: 650px) {
   main {
-    flex-direction: column;
+    background-color: var(--crust);
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "char-info statgen"
+      "skills skills";
   }
 
-  #char-info, #statgen, #skills {
-    position: static;
+  #char-info {
+    justify-self: end;
+  }
+
+  #char-info, #statgen {
+    height: auto;
+    position: relative;
+    width: 21em;
+  }
+
+  #skills {
+    height: auto;
+    background-color: var(--base);
+  }
+}
+
+/* For screens less than 650px */
+@media (max-width: 650px) {
+  main {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+      "char-info"
+      "statgen"
+      "skills";
+  }
+
+  .side-panel {
     width: 100%;
     height: auto;
+    position: relative;
+    margin-bottom: 1em;
   }
 
-  #char-info { order: 1; }
-  #statgen { order: 2; }
-  #skills { order: 3; }
-
+  #skills {
+    height: auto;
+  }
 }
-
-.container {
-  display: flex;
-}
-

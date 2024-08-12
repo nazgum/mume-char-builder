@@ -86,3 +86,16 @@
     span { margin-left: 0.3em; }
   }
 }
+
+@media (max-width: 650px) {
+  #char-info {
+    h1, h3 { width: 45%; }
+    svg.moon {
+      position: absolute;
+      top: 1.55em;
+      right: 1.5em;
+      left: auto;
+      cursor: pointer;
+    }
+  }
+}
