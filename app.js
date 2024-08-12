@@ -5,6 +5,7 @@ const port = 3000
 const fs = require('fs');
 
 app.set('view engine', 'ejs')
+app.set('trust proxy', true);  // pass ip to express
 
 app.use(express.static('static'))
 
