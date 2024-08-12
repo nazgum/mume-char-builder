@@ -93,15 +93,23 @@ export class StatGen {
       const wilValue = parseInt(document.getElementById('wil').value);
       knowledge += skill.knowledge.wil * wilValue;
     }
-    return knowledge;
+
+    let race_max = skill.pracs[this.character.race] || skill.pracs.max;
+
+    return Math.round(knowledge * race_max / skill.pracs.max);
   }
 
   updateSkillsKnowledge() {
     let skillElements = document.querySelectorAll('.skill');
+
+    let avail_skills = skillsList.filter(skill => 
+      skill.factions.includes(this.character.faction) && !skill.exclude_races.includes(this.character.race)
+    );
+
     skillElements.forEach(skillElement => {
       let skillName = skillElement.dataset.skillName;
       let skillClass = skillElement.getAttribute('data-class')
-      let skill = skillsList.find(s => s.name === skillName && s.class === skillClass);
+      let skill = avail_skills.find(s => s.name === skillName && s.class === skillClass);
       let knowledgeMax = Math.round(this.calculateKnowledge(skill));
 
       if (knowledgeMax > skill.knowledge_cap) {

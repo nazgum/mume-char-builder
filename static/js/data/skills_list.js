@@ -43,8 +43,8 @@ export const skillsList = [
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 27, Orc: 18, Númenórean: 27 },
-    knowledge_cap: 152,
-    knowledge: { base: 17, wil: 4.0, int: 3.5 }
+    knowledge_cap: 159,
+    knowledge: { base: 15, wil: 4.3, int: 3.7 }
   },
   {
     name: 'Dark Oath',
