@@ -66,5 +66,23 @@
     width: 50%;
   }
 
-  svg { position: absolute; bottom: 2em; left: 2em; cursor: pointer; }
+  svg.moon {
+    position: absolute;
+    bottom: 1.5em;
+    left: 1.5em;
+    cursor: pointer;
+  }
+
+  .github-btn {
+    position: absolute;
+    bottom: 1.5em;
+    right: 1.5em;
+    cursor: pointer;
+    display: flex;
+    text-decoration: none;
+    line-height: 1.3;
+
+    svg { display: inline; }
+    span { margin-left: 0.3em; }
+  }
 }
