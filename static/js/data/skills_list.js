@@ -359,7 +359,61 @@ export const skillsList = [
 
   // MAGE
   {
-    name: 'Magic Missile',
+    name: 'Armour',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Block Door',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 11, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Burning Hands',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 11, Númenórean: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Call Familiar',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 7, Númenórean: 7 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Call Lightning',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Charm',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 9 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Chill Touch',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
@@ -368,11 +422,29 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
   {
-    name: 'Ventriloquate',
+    name: 'Colour Spray',
+    class: 'Mage',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Control Weather',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll', 'Númenórean'],
+    pracs: { max: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Create Light',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 5, Númenórean: 5 },
+    pracs: { max: 8, Númenórean: 3 },
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -395,7 +467,16 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
   {
-    name: 'Armour',
+    name: 'Dispel Magic',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 22, Númenórean: 19 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Earthquake',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
@@ -404,47 +485,11 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
   {
-    name: 'Chill Touch',
+    name: 'Enchant',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 8, Númenórean: 8 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Create Light',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 8, Númenórean: 3 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
-  },
-  {
-    name: 'Locate Magic',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 10 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Burning Hands',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 11, Númenórean: 11 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Shroud',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 12 },
+    pracs: { max: 22, Númenórean: 13 },
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -458,6 +503,33 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
   {
+    name: 'Fireball',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Identify',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Lightning Bolt',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
+  },
+  {
     name: 'Locate',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
@@ -467,13 +539,40 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
   {
-    name: 'Call Familiar',
+    name: 'Locate Life',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 7, Númenórean: 7 },
+    pracs: { max: 16, Númenórean: 12 },
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Locate Magic',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 10 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Magic Blast',
+    class: 'Mage',
+    factions: ['Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 22, Númenórean: 22 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Magic Missile',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 8, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
   {
     name: 'Night Vision',
@@ -485,6 +584,24 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
   {
+    name: 'Portal',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 22, Númenórean: 22 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Scry',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+  },
+  {
     name: 'Shocking Grasp',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
@@ -494,7 +611,43 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
   {
-    name: 'Earthquake',
+    name: 'Shield',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Shroud',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+  },
+  {
+    name: 'Silence',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Sleep',
+    class: 'Mage',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 16, Númenórean: 13 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Store',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
@@ -512,139 +665,13 @@ export const skillsList = [
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
   {
-    name: 'Block Door',
+    name: 'Ventriloquate',
     class: 'Mage',
     factions: ['Free Folk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 11, Númenórean: 8 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Lightning Bolt',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Control Weather',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll', 'Númenórean'],
-    pracs: { max: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Store',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 16 },
+    pracs: { max: 5, Númenórean: 5 },
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
-  },
-  {
-    name: 'Colour Spray',
-    class: 'Mage',
-    factions: ['Free Folk'],
-    exclude_races: [],
-    pracs: { max: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Locate Life',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 12 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Call Lightning',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Enchant',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 22, Númenórean: 13 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
-  },
-  {
-    name: 'Scry',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 12 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Shield',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
-  },
-  {
-    name: 'Charm',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 9 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Sleep',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 13 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Fireball',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Magic Blast',
-    class: 'Mage',
-    factions: ['Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 22, Númenórean: 22 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Dispel Magic',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 22, Númenórean: 19 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
   {
     name: 'Watch Room',
@@ -655,40 +682,121 @@ export const skillsList = [
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
-  {
-    name: 'Silence',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 11 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Identify',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Portal',
-    class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 22, Númenórean: 22 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
-  },
 
   // PRIEST
+  {
+    name: 'Bless',
+    class: 'Priest',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 22 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 2.6, int: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Blind',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 18, Númenórean: 18 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Break Door',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 9 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Breath of Briskness',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 18, Númenórean: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Create Food',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 6 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Create Water',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 6 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Cure Blind',
+    class: 'Priest',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Cure Critic',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Cure Disease',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 9, Númenórean: 3 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
   {
     name: 'Cure Light',
     class: 'Priest',
     factions: ['Free Folk'],
     exclude_races: [],
+    pracs: { max: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Cure Serious',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 6 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Curse',
+    class: 'Priest',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Darkness',
+    class: 'Priest',
+    factions: ['Sauron'],
+    exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12 },
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
@@ -703,15 +811,6 @@ export const skillsList = [
     knowledge: { base: 11.2, wis: 2.6, int: 1.8, per: 1.2 }
   },
   {
-    name: 'Create Water',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 6 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
     name: 'Detect Poison',
     class: 'Priest',
     factions: [],
@@ -719,168 +818,6 @@ export const skillsList = [
     pracs: { max: 8 },
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 2.6, int: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Create Food',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 6 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Smother',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 9, Númenórean: 9 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Cure Blind',
-    class: 'Priest',
-    factions: ['Free Folk'],
-    exclude_races: [],
-    pracs: { max: 12 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Protection from Evil',
-    class: 'Priest',
-    factions: ['Free Folk'],
-    exclude_races: [],
-    pracs: { max: 18 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Bless',
-    class: 'Priest',
-    factions: ['Free Folk'],
-    exclude_races: [],
-    pracs: { max: 22 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 2.6, int: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Cure Serious',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 6 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Blind',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 18, Númenórean: 18 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Cure Disease',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 9, Númenórean: 3 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Sense Life',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 9, Númenórean: 8 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Strength',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 18, Númenórean: 8 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Poison',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 10 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Summon',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 18, Númenórean: 11 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Cure Critic',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 8 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Remove Poison',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 6 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Breath of Briskness',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 18, Númenórean: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Curse',
-    class: 'Priest',
-    factions: ['Free Folk'],
-    exclude_races: [],
-    pracs: { max: 12 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Remove Curse',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 3 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Word of Recall',
-    class: 'Priest',
-    factions: ['Free Folk'],
-    exclude_races: [],
-    pracs: { max: 23 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
   {
     name: 'Dispel Evil',
@@ -892,31 +829,13 @@ export const skillsList = [
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
   {
-    name: 'Darkness',
-    class: 'Priest',
-    factions: ['Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Heal',
+    name: 'Divination',
     class: 'Priest',
     factions: ['Free Folk'],
     exclude_races: [],
     pracs: { max: 18 },
     knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Transfer',
-    class: 'Priest',
-    factions: ['Free Folk'],
-    exclude_races: [],
-    pracs: { max: 23 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+    knowledge: { base: 11.2, wis: 2.6, int: 1.8, per: 1.2 }
   },
   {
     name: 'Fear',
@@ -937,23 +856,50 @@ export const skillsList = [
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
   {
-    name: 'Break Door',
-    class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 12, Númenórean: 9 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
-  },
-  {
-    name: 'Divination',
+    name: 'Heal',
     class: 'Priest',
     factions: ['Free Folk'],
     exclude_races: [],
     pracs: { max: 18 },
     knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 2.6, int: 1.8, per: 1.2 }
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
+  {
+    name: 'Poison',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 10 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Protection from Evil',
+    class: 'Priest',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 18 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Remove Curse',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 3 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Remove Poison',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12, Númenórean: 6 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  }, 
   {
     name: 'Sanctuary',
     class: 'Priest',
@@ -963,8 +909,179 @@ export const skillsList = [
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
+  {
+    name: 'Sense Life',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 9, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Smother',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 9, Númenórean: 9 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Strength',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 18, Númenórean: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Summon',
+    class: 'Priest',
+    factions: ['Free Folk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 18, Númenórean: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Transfer',
+    class: 'Priest',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 23 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Word of Recall',
+    class: 'Priest',
+    factions: ['Free Folk'],
+    exclude_races: [],
+    pracs: { max: 23 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
 
   // SHAMAN
+  {
+    name: 'Armour',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
+  },
+  {
+    name: 'Black Breath',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 35 },
+    knowledge_cap: 112,
+    knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
+  },
+  {
+    name: 'Blind',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 22 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Break Door',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 14 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+  },
+  {
+    name: 'Breath of Briskness',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Burning Hands',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Call Familiar',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 7, Orc: 4 },
+    knowledge_cap: 112,
+    knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Chill Touch',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 12, Orc: 10 },
+    knowledge_cap: 112,
+    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Control Weather',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 13 },
+    knowledge_cap: 112,
+    knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Create Food',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 12, Orc: 4 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Create Water',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 12, Orc: 4 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Cure Blind',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 12, Orc: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Cure Critic',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 9 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
   {
     name: 'Cure Light',
     class: 'Shaman',
@@ -975,11 +1092,29 @@ export const skillsList = [
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
   {
-    name: 'Create Water',
+    name: 'Cure Serious',
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 4 },
+    pracs: { max: 12, Orc: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Curse',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 18 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Darkness',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 11 },
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1011,96 +1146,6 @@ export const skillsList = [
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
   {
-    name: 'Armour',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
-  },
-  {
-    name: 'Chill Touch',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 10 },
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Create Food',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 4 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Smother',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Cure Blind',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 8 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Locate Magic',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 10 },
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Burning Hands',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 11 },
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Cure Serious',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 11 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Shroud',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16, Orc: 5 },
-    knowledge_cap: 112,
-    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
-  },
-  {
-    name: 'Blind',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 22 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
     name: 'Earthquake',
     class: 'Shaman',
     factions: ['Sauron'],
@@ -1110,141 +1155,6 @@ export const skillsList = [
     knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
   },
   {
-    name: 'Sense Life',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 9, Orc: 6 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Call Familiar',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 7, Orc: 4 },
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Shocking Grasp',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 11 },
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Strength',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 18, Orc: 8 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Poison',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 18 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Cure Critic',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 9 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Lightning Bolt',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
-  },
-  {
-    name: 'Remove Poison',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 6 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Breath of Briskness',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
-    name: 'Control Weather',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 13 },
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
-  },
-  {
-    name: 'Curse',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 18 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Remove Curse',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 7 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Word of Recall',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 23, Orc: 17 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
-  },
-  {
-    name: 'Black Breath',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 35 },
-    knowledge_cap: 112,
-    knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
-  },
-  {
-    name: 'Darkness',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 11 },
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
-  },
-  {
     name: 'Energy Drain',
     class: 'Shaman',
     factions: ['Sauron'],
@@ -1252,15 +1162,6 @@ export const skillsList = [
     pracs: { max: 18 },
     knowledge_cap: 112,
     knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
-  },
-  {
-    name: 'Shield',
-    class: 'Shaman',
-    factions: ['Sauron'],
-    exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
   },
   {
     name: 'Fear',
@@ -1290,13 +1191,31 @@ export const skillsList = [
     knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
   },
   {
-    name: 'Break Door',
+    name: 'Lightning Bolt',
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 14 },
+    pracs: { max: 16 },
     knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Locate Magic',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 12, Orc: 10 },
+    knowledge_cap: 112,
+    knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
+  },
+  {
+    name: 'Poison',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 18 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
   {
     name: 'Raise Dead',
@@ -1306,6 +1225,87 @@ export const skillsList = [
     pracs: { max: 26 },
     knowledge_cap: 112,
     knowledge: { base: 9.6, wis: 3.8, wil: 2.6 }
+  },
+  {
+    name: 'Remove Curse',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 7 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
+  },
+  {
+    name: 'Remove Poison',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 6 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Sense Life',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 9, Orc: 6 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Shield',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 16 },
+    knowledge_cap: 112,
+    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
+  },
+  {
+    name: 'Shocking Grasp',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 11 },
+    knowledge_cap: 112,
+    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+  },
+  {
+    name: 'Shroud',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 16, Orc: 5 },
+    knowledge_cap: 112,
+    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
+  },
+  {
+    name: 'Smother',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 12 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Strength',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 18, Orc: 8 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+  },
+  {
+    name: 'Word of Recall',
+    class: 'Shaman',
+    factions: ['Sauron'],
+    exclude_races: ['Troll', 'Númenórean'],
+    pracs: { max: 23, Orc: 17 },
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
   
 ]

@@ -1,3 +1,4 @@
+import { charInfo } from './data/char_info.js';
 import { skillsList } from './data/skills_list.js';
 
 export class SkillTree {
@@ -71,8 +72,10 @@ export class SkillTree {
       let tab_class = tab.getAttribute('data-class');
       if (tab_class === 'all') {
         tab.style.display = 'inline-block';
+        tab.classList.add('active');
       } else {
         tab.style.display = 'none';
+        tab.classList.remove('active');
       }
     });
 
@@ -283,6 +286,18 @@ export class SkillTree {
 
       if (pracs_input.getAttribute('data-class') !== 'Ranger') {
         knowledge_current = this.calcMultiClass(pracs_input, knowledge_current);
+      }
+
+      let faction = charInfo.factions.find(f => f.name === this.character.faction);
+      let race = faction.races.find(r => r.name === this.character.race);
+      let subrace = race.subraces.find(sr => sr.name === this.character.subrace);
+
+      let skill_name = skillElement.getAttribute('data-skill-name');
+      let subrace_trait = subrace.traits.find(trait => trait.skill === skill_name);
+
+      if (subrace_trait) {
+        console.log("adding trait amount: ", subrace_trait.amount);
+        knowledge_current += subrace_trait.amount;
       }
 
       knowledge_span.textContent = `${knowledge_current}%`;
