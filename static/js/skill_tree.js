@@ -261,6 +261,12 @@ export class SkillTree {
       let knowledge_max = parseInt(knowledge_max_span.textContent);
       let knowledge_current = knowledge_max/pracs_max * pracs_spent;
 
+      if (pracs_spent > 0) {
+        skillElement.classList.add('learned');
+      } else {
+        skillElement.classList.remove('learned');
+      }
+
       // Weights: first prac worth 3x, last prac worth 1/3x
       let start_weight = 3;
       let end_weight = 1 / 3;
