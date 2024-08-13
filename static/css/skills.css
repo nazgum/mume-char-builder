@@ -26,6 +26,16 @@
     &.active { font-weight: bold; background-color: var(--surface0); }
     &:hover { border-bottom-color: var(--surface2); }
   }
+
+  svg.filter-pracs {
+    display: inline;
+    margin-right: 0.5em;
+    vertical-align: text-top;
+    cursor: pointer;
+    color: var(--text);
+
+    &.enabled { color: var(--sky); }
+  }
 }
 
 #skills-list {
@@ -100,7 +110,10 @@
       flex: 1;
       text-align: right;
     }
-    
+  }
+
+  &.show-learned .skill:not(.learned) {
+    display: none;
   }
 }
 

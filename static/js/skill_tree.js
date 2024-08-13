@@ -33,6 +33,21 @@ export class SkillTree {
         }
       });
     });
+
+    // filter icon at top
+    document.querySelector('.filter-pracs').addEventListener('click', function() {
+      const skillsList = document.getElementById('skills-list');
+      
+      this.classList.toggle('enabled');
+      skillsList.classList.toggle('show-learned');
+      
+      // Toggle visibility of .skill elements
+      skillsList.querySelectorAll('.skill').forEach(skill => {
+        if (!skill.classList.contains('learned')) {
+          skill.style.display = skillsList.classList.contains('show-learned') ? 'none' : '';
+        }
+      });
+    });
   }
 
   resetTabs() {
