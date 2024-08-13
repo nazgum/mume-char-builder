@@ -33,7 +33,7 @@ main {
 @media (max-width: 1150px) and (min-width: 820px) {
   main {
     display: block;
-    overflow: hidden; /* Clear floats inside the main container */
+    overflow: visible;
   }
 
   .side-panel {
@@ -49,6 +49,7 @@ main {
   #skills {
     float: right;
     width: calc(100% - 21em); /* Remaining width for right column */
+    overflow: visible;  /* needed for sticky tabs */
   }
 
   footer {
