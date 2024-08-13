@@ -87,7 +87,7 @@
   }
 }
 
-@media (max-width: 1150px) and (min-width: 820px) {
+@media (max-width: 1100px) and (min-width: 820px) {
   #char-info {
     h1 { margin-top: 2em; }
     svg.moon {
