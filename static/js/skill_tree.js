@@ -73,6 +73,9 @@ export class SkillTree {
     new_skills_list.setAttribute('id', 'skills-list');
     this.skills_div.appendChild(new_skills_list);
 
+    // clear enabled from filter
+    document.querySelector('.filter-pracs').classList.remove('enabled');
+
     // Group skills by class
     let skill_groups = skillsList.reduce((groups, skill) => {
       if (!groups[skill.class]) {
