@@ -159,9 +159,18 @@ export const skillsList = [
   {
     name: 'Missile',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Free Folk', 'Renegades'],
+    exclude_races: [],
+    pracs: { max: 16 },
+    knowledge_cap: 114,
+    knowledge: { base: 15, dex: 3.0, per: 2.5 }
+  },
+  {
+    name: 'Missile',
+    class: 'Thief',
+    factions: ['Sauron'],
     exclude_races: ['Troll'],
-    pracs: { max: 16, Númenórean: 5 },
+    pracs: { max: 16, Orc: 13, Númenórean: 5 },
     knowledge_cap: 114,
     knowledge: { base: 15, dex: 3.0, per: 2.5 }
   },
