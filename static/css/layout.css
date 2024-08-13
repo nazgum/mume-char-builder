@@ -1,10 +1,9 @@
 html, body {
   height: 100%;
-  /*min-width: 1150px;*/
   font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
 
-  background-color: var(--base);
+  background-color: var(--crust);
   color: var(--text);
 }
 
@@ -22,46 +21,44 @@ main {
   width: 21em;
   height: 100vh;
   overflow-y: hidden;
-  background-color: var(--crust);
   padding: 1.5em;
 }
 
 #char-info { grid-area: char-info; }
-#skills { grid-area: skills; overflow-y: auto; }
+#skills { grid-area: skills; overflow-y: auto; background-color: var(--base); }
 #statgen { grid-area: statgen; }
 
 
 /* tablets */
-/* For screens between 650px and 1150px */
-@media (max-width: 1150px) and (min-width: 650px) {
+@media (max-width: 1150px) and (min-width: 820px) {
   main {
-    background-color: var(--crust);
-
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: 
-      "char-info statgen"
-      "skills skills";
+    display: block;
+    overflow: hidden; /* Clear floats inside the main container */
   }
 
-  #char-info {
-    justify-self: end;
-  }
-
-  #char-info, #statgen {
+  .side-panel {
     height: auto;
-    position: relative;
     width: 21em;
+    float: left;
+  }
+
+  #statgen {
+    clear: left;
   }
 
   #skills {
-    height: auto;
-    background-color: var(--base);
+    float: right;
+    width: calc(100% - 21em); /* Remaining width for right column */
+  }
+
+  footer {
+    clear: both; /* Clear floats for the footer */
   }
 }
 
-/* For screens less than 650px */
-@media (max-width: 650px) {
+
+/* phones */
+@media (max-width: 820px) {
   main {
     grid-template-columns: 100%;
     grid-template-rows: auto auto auto;

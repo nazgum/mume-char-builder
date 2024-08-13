@@ -2,7 +2,6 @@
 
 
 <main>
-  <%- include('../partials/char_info') %>
   <div id="skills">
     <div id="skills-top"><div>
       <span class="float-right">
@@ -18,12 +17,14 @@
         <span class="tab" data-class="Priest">Priest</span>
         <span class="tab" data-class="Shaman" style="display: none">Shaman</span>
       </div>
-
       
     </div></div>
     <div id="skills-list"></div>
   </div>
+
+  <%- include('../partials/char_info') %>
   <%- include('../partials/statgen') %>
+  
 </main>
 
 <div id="traits"></div>

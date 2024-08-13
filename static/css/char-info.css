@@ -87,15 +87,37 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 1150px) and (min-width: 820px) {
   #char-info {
-    h1, h3 { width: 45%; }
+    h1 { margin-top: 2em; }
+    svg.moon {
+      position: absolute;
+      top: 1.55em;
+      left: 1.5em;
+      right: auto;
+      bottom: auto;
+      cursor: pointer;
+    }
+
+    .github-btn { display: none; }
+  }
+}
+
+@media (max-width: 820px) {
+  #char-info {
+    position: static;
+    width: 21em;
+    margin: 0 auto;
+
     svg.moon {
       position: absolute;
       top: 1.55em;
       right: 1.5em;
       left: auto;
+      bottom: auto;
       cursor: pointer;
     }
+
+    .github-btn { display: none; }
   }
 }
