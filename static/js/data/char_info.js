@@ -1,7 +1,7 @@
 export const charInfo = {
   factions: [
     {
-      name: 'Free Folk',
+      name: 'Freefolk',
       races: [
         {
           name: 'Dwarf',

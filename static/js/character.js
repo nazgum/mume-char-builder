@@ -9,7 +9,7 @@ export class Character {
     this.pracs_avail    = 0;
     this.pracs_max      = 0;
     this.pracs_spent    = {};
-    this.faction        = "Free Folk";
+    this.faction        = "Freefolk";
     this.race           = "Dwarf";
     this.subrace        = "Broadbeam";
 
@@ -85,7 +85,7 @@ export class Character {
 
   calculateMaxPracs(level, race) {
     let pracs;
-    if (this.faction === 'Free Folk' || race === 'Númenórean') {
+    if (this.faction === 'Freefolk' || race === 'Númenórean') {
       if (level <= 25) {
         pracs = 11 * level;
       } else {

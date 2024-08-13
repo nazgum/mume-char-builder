@@ -4,7 +4,7 @@ export const skillsList = [
   {
     name: 'Awareness',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27, Orc: 18, Troll: 11, Númenórean: 27 },
     knowledge_cap: 152,
@@ -13,7 +13,7 @@ export const skillsList = [
   {
     name: 'Bandage',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 18, Orc: 8, Númenórean: 18 },
     knowledge_cap: 152,
@@ -31,7 +31,7 @@ export const skillsList = [
   {
     name: 'Climb',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 13, Orc: 13, Troll: 3, Númenórean: 13 },
     knowledge_cap: 152,
@@ -40,7 +40,7 @@ export const skillsList = [
   {
     name: 'Command',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 27, Orc: 18, Númenórean: 27 },
     knowledge_cap: 159,
@@ -58,7 +58,7 @@ export const skillsList = [
   {
     name: 'Leadership',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27, Orc: 18, Troll: 11, Númenórean: 27 },
     knowledge_cap: 152,
@@ -67,7 +67,7 @@ export const skillsList = [
   {
     name: 'Ride',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 13, Orc: 13, Númenórean: 13 },
     knowledge_cap: 152,
@@ -76,7 +76,7 @@ export const skillsList = [
   {
     name: 'Swim',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 14, Orc: 13, Troll: 3, Númenórean: 13 },
     knowledge_cap: 152,
@@ -85,7 +85,7 @@ export const skillsList = [
   {
     name: 'Track',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27 },
     knowledge_cap: 152,
@@ -94,7 +94,7 @@ export const skillsList = [
   {
     name: 'Wilderness',
     class: 'Ranger',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27 },
     knowledge_cap: 152,
@@ -105,7 +105,7 @@ export const skillsList = [
   {
     name: 'Attack',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
     knowledge_cap: 114,
@@ -114,7 +114,7 @@ export const skillsList = [
   {
     name: 'Backstab',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
     knowledge_cap: 109,
@@ -123,7 +123,7 @@ export const skillsList = [
   {
     name: 'Dodge',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23, Númenórean: 18 },
     knowledge_cap: 109,
@@ -132,7 +132,7 @@ export const skillsList = [
   {
     name: 'Envenom',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
     knowledge_cap: 109,
@@ -141,7 +141,7 @@ export const skillsList = [
   {
     name: 'Escape',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 16, Troll: 8, Númenórean: 13 },
     knowledge_cap: 109,
@@ -150,7 +150,7 @@ export const skillsList = [
   {
     name: 'Hide',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 16 },
     knowledge_cap: 109,
@@ -159,7 +159,7 @@ export const skillsList = [
   {
     name: 'Missile',
     class: 'Thief',
-    factions: ['Free Folk', 'Renegades'],
+    factions: ['Freefolk', 'Renegades'],
     exclude_races: [],
     pracs: { max: 16 },
     knowledge_cap: 114,
@@ -177,7 +177,7 @@ export const skillsList = [
   {
     name: 'Pick',
     class: 'Thief',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 16 },
     knowledge_cap: 109,
@@ -204,7 +204,7 @@ export const skillsList = [
   {
     name: 'Piercing',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
     knowledge_cap: 114,
@@ -213,7 +213,7 @@ export const skillsList = [
   {
     name: 'Search',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: [],
     pracs: { max: 16, Orc: 3, Troll: 1, Númenórean: 5 },
     knowledge_cap: 109,
@@ -231,7 +231,7 @@ export const skillsList = [
   {
     name: 'Sneak',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
     knowledge_cap: 109,
@@ -240,7 +240,7 @@ export const skillsList = [
   {
     name: 'Steal',
     class: 'Thief',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
     knowledge_cap: 109,
@@ -251,7 +251,7 @@ export const skillsList = [
   {
     name: 'Bash',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 43, Orc: 43, Troll: 40 },
     knowledge_cap: 114,
@@ -260,7 +260,7 @@ export const skillsList = [
   {
     name: 'Charge',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean', 'Troll'],
     pracs: { max: 29 },
     knowledge_cap: 114,
@@ -269,7 +269,7 @@ export const skillsList = [
   {
     name: 'Cleaving',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
@@ -278,7 +278,7 @@ export const skillsList = [
   {
     name: 'Concussion',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
@@ -287,7 +287,7 @@ export const skillsList = [
   {
     name: 'Endurance',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 58 },
     knowledge_cap: 114,
@@ -296,7 +296,7 @@ export const skillsList = [
   {
     name: 'Kick',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
@@ -305,7 +305,7 @@ export const skillsList = [
   {
     name: 'Parry',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
@@ -314,7 +314,7 @@ export const skillsList = [
   {
     name: 'Rescue',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Númenórean'],
     pracs: { max: 21, Orc: 10, Troll: 8 },
     knowledge_cap: 114,
@@ -341,7 +341,7 @@ export const skillsList = [
   {
     name: 'Slashing',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
@@ -350,7 +350,7 @@ export const skillsList = [
   {
     name: 'Stabbing',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
@@ -359,7 +359,7 @@ export const skillsList = [
   {
     name: 'Two-Handed',
     class: 'Warrior',
-    factions: ['Free Folk', 'Sauron', 'Renegades'],
+    factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
     knowledge_cap: 114,
@@ -370,7 +370,7 @@ export const skillsList = [
   {
     name: 'Armour',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -379,7 +379,7 @@ export const skillsList = [
   {
     name: 'Block Door',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 8 },
     knowledge_cap: 112,
@@ -388,7 +388,7 @@ export const skillsList = [
   {
     name: 'Burning Hands',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 11 },
     knowledge_cap: 112,
@@ -397,7 +397,7 @@ export const skillsList = [
   {
     name: 'Call Familiar',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 7, Númenórean: 7 },
     knowledge_cap: 112,
@@ -406,7 +406,7 @@ export const skillsList = [
   {
     name: 'Call Lightning',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -415,7 +415,7 @@ export const skillsList = [
   {
     name: 'Charm',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 9 },
     knowledge_cap: 112,
@@ -424,7 +424,7 @@ export const skillsList = [
   {
     name: 'Chill Touch',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 8 },
     knowledge_cap: 112,
@@ -433,7 +433,7 @@ export const skillsList = [
   {
     name: 'Colour Spray',
     class: 'Mage',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 16 },
     knowledge_cap: 112,
@@ -442,7 +442,7 @@ export const skillsList = [
   {
     name: 'Control Weather',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll', 'Númenórean'],
     pracs: { max: 16 },
     knowledge_cap: 112,
@@ -451,7 +451,7 @@ export const skillsList = [
   {
     name: 'Create Light',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 3 },
     knowledge_cap: 112,
@@ -460,7 +460,7 @@ export const skillsList = [
   {
     name: 'Detect Invis',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 11 },
     knowledge_cap: 112,
@@ -469,7 +469,7 @@ export const skillsList = [
   {
     name: 'Detect Magic',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 8 },
     knowledge_cap: 112,
@@ -478,7 +478,7 @@ export const skillsList = [
   {
     name: 'Dispel Magic',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 22, Númenórean: 19 },
     knowledge_cap: 112,
@@ -487,7 +487,7 @@ export const skillsList = [
   {
     name: 'Earthquake',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -496,7 +496,7 @@ export const skillsList = [
   {
     name: 'Enchant',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 22, Númenórean: 13 },
     knowledge_cap: 112,
@@ -505,7 +505,7 @@ export const skillsList = [
   {
     name: 'Find the Path',
     class: 'Mage',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 11 },
     knowledge_cap: 112,
@@ -514,7 +514,7 @@ export const skillsList = [
   {
     name: 'Fireball',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -523,7 +523,7 @@ export const skillsList = [
   {
     name: 'Identify',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -532,7 +532,7 @@ export const skillsList = [
   {
     name: 'Lightning Bolt',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -541,7 +541,7 @@ export const skillsList = [
   {
     name: 'Locate',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
     knowledge_cap: 112,
@@ -550,7 +550,7 @@ export const skillsList = [
   {
     name: 'Locate Life',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
     knowledge_cap: 112,
@@ -559,7 +559,7 @@ export const skillsList = [
   {
     name: 'Locate Magic',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 10 },
     knowledge_cap: 112,
@@ -577,7 +577,7 @@ export const skillsList = [
   {
     name: 'Magic Missile',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 8 },
     knowledge_cap: 112,
@@ -586,7 +586,7 @@ export const skillsList = [
   {
     name: 'Night Vision',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 9 },
     knowledge_cap: 112,
@@ -595,7 +595,7 @@ export const skillsList = [
   {
     name: 'Portal',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 22, Númenórean: 22 },
     knowledge_cap: 112,
@@ -604,7 +604,7 @@ export const skillsList = [
   {
     name: 'Scry',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
     knowledge_cap: 112,
@@ -613,7 +613,7 @@ export const skillsList = [
   {
     name: 'Shocking Grasp',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 11 },
     knowledge_cap: 112,
@@ -622,7 +622,7 @@ export const skillsList = [
   {
     name: 'Shield',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -631,7 +631,7 @@ export const skillsList = [
   {
     name: 'Shroud',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
     knowledge_cap: 112,
@@ -640,7 +640,7 @@ export const skillsList = [
   {
     name: 'Silence',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 11 },
     knowledge_cap: 112,
@@ -649,7 +649,7 @@ export const skillsList = [
   {
     name: 'Sleep',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 13 },
     knowledge_cap: 112,
@@ -658,7 +658,7 @@ export const skillsList = [
   {
     name: 'Store',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     knowledge_cap: 112,
@@ -667,7 +667,7 @@ export const skillsList = [
   {
     name: 'Teleport',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 13 },
     knowledge_cap: 112,
@@ -676,7 +676,7 @@ export const skillsList = [
   {
     name: 'Ventriloquate',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 5, Númenórean: 5 },
     knowledge_cap: 112,
@@ -685,7 +685,7 @@ export const skillsList = [
   {
     name: 'Watch Room',
     class: 'Mage',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 10, Númenórean: 8 },
     knowledge_cap: 112,
@@ -696,7 +696,7 @@ export const skillsList = [
   {
     name: 'Bless',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 22 },
     knowledge_cap: 112,
@@ -705,7 +705,7 @@ export const skillsList = [
   {
     name: 'Blind',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 18 },
     knowledge_cap: 112,
@@ -714,7 +714,7 @@ export const skillsList = [
   {
     name: 'Break Door',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 9 },
     knowledge_cap: 112,
@@ -723,7 +723,7 @@ export const skillsList = [
   {
     name: 'Breath of Briskness',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 16 },
     knowledge_cap: 112,
@@ -732,7 +732,7 @@ export const skillsList = [
   {
     name: 'Create Food',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
     knowledge_cap: 112,
@@ -741,7 +741,7 @@ export const skillsList = [
   {
     name: 'Create Water',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
     knowledge_cap: 112,
@@ -750,7 +750,7 @@ export const skillsList = [
   {
     name: 'Cure Blind',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 12 },
     knowledge_cap: 112,
@@ -759,7 +759,7 @@ export const skillsList = [
   {
     name: 'Cure Critic',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 8 },
     knowledge_cap: 112,
@@ -768,7 +768,7 @@ export const skillsList = [
   {
     name: 'Cure Disease',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 9, Númenórean: 3 },
     knowledge_cap: 112,
@@ -777,7 +777,7 @@ export const skillsList = [
   {
     name: 'Cure Light',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 12 },
     knowledge_cap: 112,
@@ -786,7 +786,7 @@ export const skillsList = [
   {
     name: 'Cure Serious',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
     knowledge_cap: 112,
@@ -795,7 +795,7 @@ export const skillsList = [
   {
     name: 'Curse',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 12 },
     knowledge_cap: 112,
@@ -813,7 +813,7 @@ export const skillsList = [
   {
     name: 'Detect Evil',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 8 },
     knowledge_cap: 112,
@@ -831,7 +831,7 @@ export const skillsList = [
   {
     name: 'Dispel Evil',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
     knowledge_cap: 112,
@@ -840,7 +840,7 @@ export const skillsList = [
   {
     name: 'Divination',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
     knowledge_cap: 112,
@@ -849,7 +849,7 @@ export const skillsList = [
   {
     name: 'Fear',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 18 },
     knowledge_cap: 112,
@@ -858,7 +858,7 @@ export const skillsList = [
   {
     name: 'Harm',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 15 },
     knowledge_cap: 112,
@@ -867,7 +867,7 @@ export const skillsList = [
   {
     name: 'Heal',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
     knowledge_cap: 112,
@@ -876,7 +876,7 @@ export const skillsList = [
   {
     name: 'Poison',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 10 },
     knowledge_cap: 112,
@@ -885,7 +885,7 @@ export const skillsList = [
   {
     name: 'Protection from Evil',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
     knowledge_cap: 112,
@@ -894,7 +894,7 @@ export const skillsList = [
   {
     name: 'Remove Curse',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 3 },
     knowledge_cap: 112,
@@ -903,7 +903,7 @@ export const skillsList = [
   {
     name: 'Remove Poison',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
     knowledge_cap: 112,
@@ -912,7 +912,7 @@ export const skillsList = [
   {
     name: 'Sanctuary',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 25, Númenórean: 18 },
     knowledge_cap: 112,
@@ -921,7 +921,7 @@ export const skillsList = [
   {
     name: 'Sense Life',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 9, Númenórean: 8 },
     knowledge_cap: 112,
@@ -930,7 +930,7 @@ export const skillsList = [
   {
     name: 'Smother',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 9, Númenórean: 9 },
     knowledge_cap: 112,
@@ -939,7 +939,7 @@ export const skillsList = [
   {
     name: 'Strength',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 8 },
     knowledge_cap: 112,
@@ -948,7 +948,7 @@ export const skillsList = [
   {
     name: 'Summon',
     class: 'Priest',
-    factions: ['Free Folk', 'Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 11 },
     knowledge_cap: 112,
@@ -957,7 +957,7 @@ export const skillsList = [
   {
     name: 'Transfer',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 23 },
     knowledge_cap: 112,
@@ -966,7 +966,7 @@ export const skillsList = [
   {
     name: 'Word of Recall',
     class: 'Priest',
-    factions: ['Free Folk'],
+    factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 23 },
     knowledge_cap: 112,
