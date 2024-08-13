@@ -98,7 +98,7 @@ html[data-theme="dark"] {
 }
 
 
-@media (max-width: 680px) {
+@media (max-width: 600px) {
   #skills-list .skill-group .skill-stats {
     display: none;
   }
