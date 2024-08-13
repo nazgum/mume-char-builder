@@ -169,6 +169,7 @@ export class StatGen {
       const baseValue = this.initialStats[stat] + this.raceModifiers[stat];
       const statInput = document.getElementById(stat);
       statInput.value = baseValue;
+      document.getElementById(`${stat}-current`).textContent = baseValue;
     }
 
     this.updateAvailablePoints();
