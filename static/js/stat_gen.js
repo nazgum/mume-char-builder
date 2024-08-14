@@ -161,13 +161,8 @@ export class StatGen {
   }
 
   setupStats() {
-    console.log("setup stats");
-    
     for (let stat in this.initialStats) {
       let baseValue = this.initialStats[stat] + this.pointsSpent[stat] + this.raceModifiers[stat];
-      console.log("stat: ", stat);
-      console.log("points spent: ", this.pointsSpent[stat]);
-      console.log("stat value: ", baseValue);
       let statInput = document.getElementById(stat);
       statInput.value = baseValue;
       document.getElementById(`${stat}-current`).textContent = baseValue;

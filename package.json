@@ -1,8 +1,9 @@
 {
+  "type": "module",
   "name": "mume-char-builder",
   "version": "1.0.0",
   "description": "character builder for mume",
-  "main": "app.js",
+  "exports": "./app.js",
   "live": "nodemon app.js",
   "scripts": {},
   "repository": {
@@ -17,6 +18,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "lowdb": "^7.0.1",
     "nanoid": "^5.0.7"
   }
 }

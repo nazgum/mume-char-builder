@@ -3,45 +3,68 @@ export class Build {
     this.character = character;
     this.statGen   = character.statGen;
     this.skillTree = character.skillTree;
-    this.loading   = false
+    this.loading   = false;
 
-    let btn = document.getElementById('save-build')
-    btn.addEventListener('click', () => {
-      this.save();
+    this.setupButton();
+    this.setupDialog();
+
+    if (window.build_data) {
+      this.load(window.build_data);
+    }
+  }
+
+  setupButton() {
+    document.getElementById('save-build').addEventListener('click', async () => {
+      let data = {
+        faction:     this.character.faction,
+        race:        this.character.race,
+        class:       this.character.class,
+        subclass:    this.character.subclass,
+        level:       this.character.level,
+        pointsSpent: this.statGen.pointsSpent,
+        availPoints: this.statGen.availPoints,
+        pracsSpent:  this.skillTree.pracsSpent
+      };
+
+      let dialog = document.getElementById('copy-dialog');
+      dialog.showModal();
+    
+      try {
+        let response = await fetch('/save', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(data)
+        });
+    
+        if (response.ok) {
+          let result = await response.json();
+          let link = result.link;
+
+          // Show the link in the dialog
+          let dialog = document.getElementById('copy-dialog');
+          dialog.querySelector('p').innerText = "Share this link to your build"
+
+          let copied_link = document.getElementById('copied-link');
+          copied_link.setAttribute('href', link);
+          copied_link.innerHTML = link;
+          copied_link.classList.remove('hidden');
+          document.getElementById('close-dialog').classList.remove('hidden');
+
+        } else {
+          console.error('Failed to save data');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+      }
     });
+  }
 
+  setupDialog() {
     document.getElementById('close-dialog').addEventListener('click', () => {
       document.getElementById('copy-dialog').close();
     });
-
-    // Check for URL parameters and load data if present
-    let path = window.location.pathname;
-    let segments = path.split('/');
-    let encodedData = segments[segments.length - 1];
-
-    console.log("encoded data: ", encodedData);
-
-    if (encodedData) {
-      this.load(decodeURIComponent(encodedData));
-    }
-  }
-
-  encodeUrl(str) {
-    return btoa(str)
-        .replace(/\+/g, '-') // Convert + to -
-        .replace(/\//g, '_') // Convert / to _
-        .replace(/=+$/, ''); // Remove ending '='
-  }
-
-  decodeUrl(str) {
-    str = str
-        .replace(/-/g, '+') // Convert - to +
-        .replace(/_/g, '/'); // Convert _ to /
-    let padding = str.length % 4;
-    if (padding > 0) {
-        str += '='.repeat(4 - padding); // Add padding if necessary
-    }
-    return atob(str);
   }
 
   save() {
@@ -61,10 +84,6 @@ export class Build {
     let encoded = this.encodeUrl(json);
     let link = `${window.location.origin}/build/${encoded}`;
 
-    console.log("url: ", link);
-
-    //return `${window.location.origin}/build/${encoded}`;
-
     navigator.clipboard.writeText(link)
       .then(() => {
         console.log('Link copied to clipboard!');
@@ -79,22 +98,23 @@ export class Build {
       });
   }
 
-  load(encoded) {
+  load(build_data) {
     this.loading = true;
 
-    // Decode the data from the URL
-    let data = JSON.parse(atob(encoded));
+    try {
+        const buildData = JSON.parse(build_data);
 
-    // Restore build properties
-    this.character.faction    = data.faction;
-    this.character.race       = data.race;
-    this.character.class      = data.class;
-    this.character.subclass   = data.subclass;
-    this.character.level      = data.level;
-    this.statGen.pointsSpent  = data.pointsSpent;
-    this.statGen.availPoints  = data.availPoints;
-    this.skillTree.pracsSpent = data.pracsSpent;
-
-    console.log("build data: ", data);
+        // Restore build properties
+        this.character.faction    = buildData.faction;
+        this.character.race       = buildData.race;
+        this.character.class      = buildData.class;
+        this.character.subclass   = buildData.subclass;
+        this.character.level      = buildData.level;
+        this.statGen.pointsSpent  = buildData.pointsSpent;
+        this.statGen.availPoints  = buildData.availPoints;
+        this.skillTree.pracsSpent = buildData.pracsSpent;
+    } catch (error) {
+        console.error('Error loading build data:', error);
+    }
   }
 }

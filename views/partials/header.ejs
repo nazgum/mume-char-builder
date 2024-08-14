@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="/css/skills.css?v=1.0.5">
     <link rel="stylesheet" href="/css/statgen.css">
     <link rel="stylesheet" href="/css/traits.css">
+    <script>
+        <% if (typeof build_data !== 'undefined') { %>
+            window.build_data = <%- JSON.stringify(build_data) %>;
+        <% } %>
+    </script>
     <script type="module" src="/js/main.js"></script>
 </head>
 <body>
