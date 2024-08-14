@@ -53,9 +53,8 @@ dialog {
   position: relative;
   z-index: 10;
 
-  h3 { margin-bottom: 0; }
-  p.desc { color: var(--sub-text0); margin-bottom: 1em; }
-  a#copied-link { display: block; word-break: break-word; margin-bottom: 1em; color: var(--sky); }
+  h3 { margin-bottom: 0; color: var(--text); }
+  a#copied-link { display: block; word-break: break-word; margin-bottom: 1.5em; color: var(--sky); }
 }
 
 /* Fullscreen overlay behind the dialog */

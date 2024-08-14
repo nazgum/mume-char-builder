@@ -44,7 +44,6 @@ export class Build {
 
           // Show the link in the dialog
           let dialog = document.getElementById('copy-dialog');
-          dialog.querySelector('p').innerText = "Share this link to your build"
 
           let copied_link = document.getElementById('copied-link');
           copied_link.setAttribute('href', link);
