@@ -6,11 +6,16 @@ export class SkillTree {
     this.character       = character
     this.statGen         = character.statGen
     this.classFilter     = 'all'
+    this.pracsPerClass   = {}
     this.pracsSpent      = {}
     this.skills_div      = document.getElementById('skills');
     this.skills_tabs     = document.getElementById('skills-tabs');
 
-    // faction btns
+    this.setupTabs();
+    this.setupSkillFilter();
+  }
+
+  setupTabs() {
     document.querySelectorAll('#skills-tabs .tab').forEach(tab => {
       tab.addEventListener('click', (event) => {
         this.classFilter = event.target.getAttribute('data-class');
@@ -33,8 +38,10 @@ export class SkillTree {
         }
       });
     });
+  }
 
-    // filter icon at top
+  // filter icon at top
+  setupSkillFilter() {
     document.querySelector('.filter-pracs').addEventListener('click', function() {
       const skillsList = document.getElementById('skills-list');
       
@@ -130,7 +137,7 @@ export class SkillTree {
         let skill_knowledge_div = document.createElement('div');
 
         skill_div.classList.add('skill');
-        skill_div.setAttribute('data-class', skill.class);
+        skill_div.dataset.class = skill.class;
 
         skill_name_div.classList.add('skill-name');
         skill_stats_div.classList.add('skill-stats');
@@ -142,7 +149,7 @@ export class SkillTree {
         skill_div.appendChild(skill_pracs_div);
         skill_div.appendChild(skill_knowledge_div);
 
-        skill_div.dataset.skillName = skill.name;
+        skill_div.dataset.skill    = skill.name;
         skill_name_div.textContent = skill.name;
 
         skill_stats_div.textContent = this.skillStats(skill);
@@ -150,10 +157,15 @@ export class SkillTree {
         let pracs_input = document.createElement('input');
         pracs_input.classList.add('pracs-input');
         pracs_input.setAttribute('data-class', skill.class);
+        pracs_input.setAttribute('data-skill', skill.name);
         pracs_input.type = 'number';
         pracs_input.value = 0;
         pracs_input.min = 0;
         pracs_input.max = skill.pracs[this.character.race] || skill.pracs.max;
+
+        if (this.character.build.loading) {
+          pracs_input.value = this.pracsSpent[skill.name];
+        }
         
         let pracs_label = document.createElement('span');
         pracs_label.textContent = `/ ${pracs_input.max}`;
@@ -217,22 +229,30 @@ export class SkillTree {
   }
 
   updatePracsSpent() {
-    this.pracsSpent = {};
+    this.pracsPerClass = {};
+    this.pracsSpent    = {};
 
     let pracsInputs = this.skills_div.querySelectorAll('.pracs-input');
 
     pracsInputs.forEach(input => {
-        let skill_class  = input.getAttribute('data-class');
+        let skill_class  = input.dataset.class;
+        let skill_name   = input.dataset.skill;
         let pracs_amount = parseInt(input.value) || 0;
 
-        if (!this.pracsSpent[skill_class]) {
-            this.pracsSpent[skill_class] = 0;
+        if (!this.pracsPerClass[skill_class]) {
+            this.pracsPerClass[skill_class] = 0;
         }
 
-        this.pracsSpent[skill_class] += pracs_amount;
+        this.pracsPerClass[skill_class] += pracs_amount;
+        
+        if (!this.pracsSpent[skill_name]) {
+          this.pracsSpent[skill_name] = 0;
+        }
+        this.pracsSpent[skill_name] += pracs_amount;
     });
 
-    console.log(this.pracsSpent);
+    console.log("pracs per class: ", this.pracsPerClass);
+    console.log("pracs spent: ", this.pracsSpent);
   }
 
   calcMultiClass(pracs_input, knowledge_current) {
@@ -240,14 +260,14 @@ export class SkillTree {
     let skill_class = pracs_input.getAttribute('data-class');
 
     // Iterate over pracsSpent object
-    /*for (let [class_name, pracs] of Object.entries(this.pracsSpent)) {
+    /*for (let [class_name, pracs] of Object.entries(this.pracsPerClass)) {
       // Exclude pracs for "Ranger" and the current class
       if (class_name !== "Ranger" && class_name !== skill_class) {
           total_pracs += pracs;
       }
     }*/
     // Precompute total pracs outside of the loop
-    let total_pracs = Object.entries(this.pracsSpent).reduce((total, [class_name, pracs]) => {
+    let total_pracs = Object.entries(this.pracsPerClass).reduce((total, [class_name, pracs]) => {
       if (class_name !== "Ranger" && class_name !== skill_class) {
         return total + pracs;
       }
@@ -316,7 +336,7 @@ export class SkillTree {
       let race = faction.races.find(r => r.name === this.character.race);
       let subrace = race.subraces.find(sr => sr.name === this.character.subrace);
 
-      let skill_name = skillElement.getAttribute('data-skill-name');
+      let skill_name = skillElement.getAttribute('data-skill');
       let subrace_trait = subrace.traits.find(trait => trait.skill === skill_name);
 
       if (subrace_trait) {

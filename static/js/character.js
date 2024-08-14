@@ -1,6 +1,7 @@
 import { charInfo } from './data/char_info.js';
 import { StatGen } from './stat_gen.js';
 import { SkillTree } from './skill_tree.js';
+import { Build } from './build.js';
 
 export class Character {
   constructor() {
@@ -12,6 +13,7 @@ export class Character {
     this.faction        = "Freefolk";
     this.race           = "Dwarf";
     this.subrace        = "Broadbeam";
+    this.level          = 25
 
     // refs to html elements
     this.faction_btns     = document.getElementById('faction-btns');
@@ -22,25 +24,25 @@ export class Character {
     this.pracs_avail_span = document.getElementById('pracs-avail');
     this.pracs_max_span   = document.getElementById('pracs-max');
 
+    this.build = new Build(this);
+
     this.setupListeners();
     this.skillTree.updateSkills();
+    this.selectFaction();
     this.populateRaces();
-    this.statGen.resetStats();
+    this.level_input.value = this.level;
     this.updateMaxPracs();
+
+    console.log("points spent before setup: ", this.statGen.pointsSpent);
+    this.statGen.setupStats();
+
+    this.build.loading = false;  // finish loading
   }
 
-  populateFactions() {
-    charInfo.factions.forEach(faction => {
-      let option = document.createElement('option');
-      option.value = faction.name;
-      option.textContent = faction.name;
-      this.faction_select.appendChild(option);
-    });
+  selectFaction() {
+    document.querySelectorAll('#faction-btns button').forEach(btn => btn.classList.remove('selected'));
 
-    // Set the first faction as selected and populate races
-    this.faction_select.selectedIndex = 0;
-    this.faction = this.faction_select.value;
-    this.populateRaces();
+    document.querySelector(`#faction-btns button[data-faction="${this.faction}"]`).classList.add('selected');
   }
 
   populateRaces() {
@@ -54,9 +56,18 @@ export class Character {
       this.race_select.appendChild(option);
     });
 
-    // Set the first race as selected and populate subraces
-    this.race_select.selectedIndex = 0;
-    this.race = this.race_select.value;
+    if (this.build.loading) {
+      console.log("setting race to:", this.race);
+      this.race_select.value = this.race;
+    } else {
+      // Set the first race as selected and populate subraces
+      this.race_select.selectedIndex = 0;
+      this.race = this.race_select.value;
+    }
+
+    
+    
+
     this.populateSubraces();
   }
 
@@ -83,19 +94,37 @@ export class Character {
     this.updateMaxPracs();
   }
 
-  calculateMaxPracs(level, race) {
+  updateLevel() {
+    let level = parseInt(this.level_input.value);
+    
+    if (isNaN(level) || level <= 0 || level > 100) {
+      level = 1;
+      this.level_input.value = level;
+    }
+
+    this.level = level;
+  }
+
+  updateMaxPracs() {
+    let race = this.race_select.value;
+ 
+    this.pracs_max = this.calculateMaxPracs(race);
+    this.updateAvailPracs();
+  }
+
+  calculateMaxPracs(race) {
     let pracs;
     if (this.faction === 'Freefolk' || race === 'Númenórean') {
-      if (level <= 25) {
-        pracs = 11 * level;
+      if (this.level <= 25) {
+        pracs = 11 * this.level;
       } else {
-        pracs = (11 * 25) + Math.floor((level - 25) / 1.42);
+        pracs = (11 * 25) + Math.floor((this.level - 25) / 1.42);
       }
     } else {
-      if (level <= 25) {
-        pracs = 10 * level;
+      if (this.level <= 25) {
+        pracs = 10 * this.level;
       } else {
-        pracs = (10 * 25) + Math.floor((level - 25) / 1.7);
+        pracs = (10 * 25) + Math.floor((this.level - 25) / 1.7);
       }
     }
 
@@ -104,19 +133,6 @@ export class Character {
     }
 
     return pracs;
-  }
-
-  updateMaxPracs() {
-    let level = parseInt(this.level_input.value);
-    let race = this.race_select.value;
-    
-    if (isNaN(level) || level <= 0 || level > 100) {
-      level = 1;
-      this.level_input.value = level;
-    }
-
-    this.pracs_max = this.calculateMaxPracs(level, race);
-    this.updateAvailPracs();
   }
 
   updateAvailPracs() {
@@ -164,10 +180,12 @@ export class Character {
     });
 
     this.level_input.addEventListener('change', (event) => {
+      this.updateLevel();
       this.updateMaxPracs();
     });
 
     this.level_input.addEventListener('blur', () => {
+      this.updateLevel();
       this.updateMaxPracs();
     });
   }

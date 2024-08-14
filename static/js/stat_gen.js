@@ -107,7 +107,7 @@ export class StatGen {
     );
 
     skillElements.forEach(skillElement => {
-      let skillName = skillElement.dataset.skillName;
+      let skillName = skillElement.dataset.skill;
       let skillClass = skillElement.getAttribute('data-class')
       let skill = avail_skills.find(s => s.name === skillName && s.class === skillClass);
       let knowledgeMax = Math.round(this.calculateKnowledge(skill));
@@ -160,20 +160,28 @@ export class StatGen {
     }
   }
 
-  resetStats() {
-    console.log("reset stats");
+  setupStats() {
+    console.log("setup stats");
     
-    this.pointsSpent = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
-
     for (let stat in this.initialStats) {
-      const baseValue = this.initialStats[stat] + this.raceModifiers[stat];
-      const statInput = document.getElementById(stat);
+      let baseValue = this.initialStats[stat] + this.pointsSpent[stat] + this.raceModifiers[stat];
+      console.log("stat: ", stat);
+      console.log("points spent: ", this.pointsSpent[stat]);
+      console.log("stat value: ", baseValue);
+      let statInput = document.getElementById(stat);
       statInput.value = baseValue;
       document.getElementById(`${stat}-current`).textContent = baseValue;
     }
 
     this.updateAvailablePoints();
     this.updateSkillsKnowledge();
+  }
+
+  resetStats() {
+    console.log("reset stats");
+    
+    this.pointsSpent = { str: 0, int: 0, wis: 0, dex: 0, con: 0, wil: 0, per: 0 };
+    this.setupStats();
   }
 
   addResetButtonListener() {

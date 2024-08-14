@@ -1,13 +1,14 @@
 const express = require('express')
+const path = require('path');
 const app = express()
 const port = 3000
-
 const fs = require('fs');
 
 app.set('view engine', 'ejs')
 app.set('trust proxy', true);  // pass ip to express
 
-app.use(express.static('static'))
+//app.use(express.static('static'))
+app.use(express.static(path.join(__dirname, 'static')));
 
 // logger
 app.use((req,res,next) =>{
@@ -28,9 +29,16 @@ app.use((req,res,next) =>{
   next();
 });
 
+
 app.get('/', (req, res) => {
   res.render('pages/index')
 })
+
+app.get('/build/:data', (req, res) => {
+  console.log('Received data:', req.params.data); // Log data
+  res.render('pages/index', { encodedData: req.params.data });
+})
+
 
 app.use((req, res, next) => {
   res.status(404).send("Route does not exist.");
