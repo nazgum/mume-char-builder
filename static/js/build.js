@@ -107,7 +107,7 @@ export class Build {
         this.character.faction    = buildData.faction;
         this.character.race       = buildData.race;
         this.character.class      = buildData.class;
-        this.character.subclass   = buildData.subclass;
+        this.character.subrace    = buildData.subrace;
         this.character.level      = buildData.level;
         this.statGen.pointsSpent  = buildData.pointsSpent;
         this.statGen.availPoints  = buildData.availPoints;
