@@ -32,8 +32,6 @@ export class Character {
     this.populateRaces();
     this.level_input.value = this.level;
     this.updateMaxPracs();
-
-    console.log("points spent before setup: ", this.statGen.pointsSpent);
     this.statGen.setupStats();
 
     if (this.build.loading) {
@@ -63,16 +61,12 @@ export class Character {
     });
 
     if (this.build.loading) {
-      console.log("setting race to:", this.race);
       this.race_select.value = this.race;
     } else {
       // Set the first race as selected and populate subraces
       this.race_select.selectedIndex = 0;
       this.race = this.race_select.value;
     }
-
-    
-    
 
     this.populateSubraces();
   }
@@ -90,9 +84,13 @@ export class Character {
       this.subrace_select.appendChild(option);
     });
 
-    // Set the first subrace as selected
-    this.subrace_select.selectedIndex = 0;
-    this.subrace = this.subrace_select.value;
+    if (this.build.loading) {
+      this.subrace_select.value = this.subrace;
+    } else {
+      // Set the first subrace as selected
+      this.subrace_select.selectedIndex = 0;
+      this.subrace = this.subrace_select.value;
+    }
 
     this.skillTree.updateSkills(faction, race);
     this.statGen.updateSkillsKnowledge();
