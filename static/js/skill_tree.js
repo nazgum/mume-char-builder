@@ -57,6 +57,19 @@ export class SkillTree {
     });
   }
 
+  startFiltered() {
+    const skillsList = document.getElementById('skills-list');
+
+    document.querySelector('.filter-pracs').classList.add('enabled');
+    skillsList.classList.add('show-learned');
+
+    skillsList.querySelectorAll('.skill').forEach(skill => {
+      if (!skill.classList.contains('learned')) {
+        skill.style.display = skillsList.classList.contains('show-learned') ? 'none' : '';
+      }
+    });
+  }
+
   resetTabs() {
     this.classFilter = 'all'
 

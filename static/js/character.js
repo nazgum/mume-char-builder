@@ -36,6 +36,12 @@ export class Character {
     console.log("points spent before setup: ", this.statGen.pointsSpent);
     this.statGen.setupStats();
 
+    if (this.build.loading) {
+      this.skillTree.startFiltered();
+      this.skillTree.updatePracsSpent();
+      this.skillTree.updateKnowledge();
+    }
+
     this.build.loading = false;  // finish loading
   }
 
