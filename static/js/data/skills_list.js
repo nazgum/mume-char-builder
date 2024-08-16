@@ -513,6 +513,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
