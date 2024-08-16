@@ -7,6 +7,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27, Orc: 18, Troll: 11, Númenórean: 27 },
+    difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 20, per: 3.75, int: 2.6 }
   },
@@ -16,6 +17,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 18, Orc: 8, Númenórean: 18 },
+    difficulty: 'Easy',
     knowledge_cap: 152,
     knowledge: { base: 18, int: 3.75, dex: 2.5 }
   },
@@ -25,6 +27,7 @@ export const skillsList = [
     factions: ['Renegades'],
     exclude_races: [],
     pracs: { max: 18 },
+    difficulty: 'Easy',
     knowledge_cap: 152,
     knowledge: { base: 18, int: 3.75, dex: 2.5 }
   },
@@ -34,6 +37,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 13, Orc: 13, Troll: 3, Númenórean: 13 },
+    difficulty: 'Very Easy',
     knowledge_cap: 152,
     knowledge: { base: 18, dex: 3, wil: 2, str: 1.25 }
   },
@@ -43,6 +47,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 27, Orc: 18, Númenórean: 27 },
+    difficulty: 'Normal',
     knowledge_cap: 159,
     knowledge: { base: 15, wil: 4.3, int: 3.7 }
   },
@@ -52,6 +57,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 23, Númenórean: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 16.5, con: 3, wil: 2, per: 0.75 }
   },
@@ -61,6 +67,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27, Orc: 18, Troll: 11, Númenórean: 27 },
+    difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 17, wil: 4.0, wis: 3.5 }
   },
@@ -70,6 +77,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 13, Orc: 13, Númenórean: 13 },
+    difficulty: 'Very Easy',
     knowledge_cap: 152,
     knowledge: { base: 18, dex: 3.75, wil: 2.5 },
   },
@@ -79,6 +87,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 14, Orc: 13, Troll: 3, Númenórean: 13 },
+    difficulty: 'Very Easy',
     knowledge_cap: 152,
     knowledge: { base: 16, con: 3, wil: 2, dex: 1.3 }
   },
@@ -88,6 +97,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27 },
+    difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 16.9, int: 2.5, per: 3.8 }
   },
@@ -97,6 +107,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 27 },
+    difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 0, str: 3.6, wil: 4.85 }
   },
@@ -108,6 +119,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 15, dex: 3.0, wil: 2.5 }
   },
@@ -117,6 +129,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
+    difficulty: 'Hard',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -126,6 +139,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23, Númenórean: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -135,6 +149,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
+    difficulty: 'Hard',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, int: 2.5 }
   },
@@ -144,6 +159,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: [],
     pracs: { max: 16, Troll: 8, Númenórean: 13 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -153,6 +169,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 16 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -162,6 +179,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Renegades'],
     exclude_races: [],
     pracs: { max: 16 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 15, dex: 3.0, per: 2.5 }
   },
@@ -171,6 +189,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 16, Orc: 13, Númenórean: 5 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 15, dex: 3.0, per: 2.5 }
   },
@@ -180,6 +199,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 16 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, int: 2.5 }
   },
@@ -189,6 +209,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll'],
     pracs: { max: 16, Orc: 8, Númenórean: 5 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, int: 2.5 }
   },
@@ -198,6 +219,7 @@ export const skillsList = [
     factions: ['Renegades'],
     exclude_races: [],
     pracs: { max: 16, Orc: 6 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, int: 2.5 }
   },
@@ -207,6 +229,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 10.5, dex: 2.5, per: 1.75, str: 1.5 }
   },
@@ -216,6 +239,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: [],
     pracs: { max: 16, Orc: 3, Troll: 1, Númenórean: 5 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -225,6 +249,7 @@ export const skillsList = [
     factions: ['Renegades'],
     exclude_races: [],
     pracs: { max: 16, Orc: 4 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -234,6 +259,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
+    difficulty: 'Hard',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -243,6 +269,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Troll'],
     pracs: { max: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 109,
     knowledge: { base: 10, dex: 3.0, per: 2.5 }
   },
@@ -254,6 +281,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 43, Orc: 43, Troll: 40 },
+    difficulty: 'Hard',
     knowledge_cap: 114,
     knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
   },
@@ -263,6 +291,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean', 'Troll'],
     pracs: { max: 29 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, dex: 2.4, str: 1.8, wil: 1.8 }
   },
@@ -272,6 +301,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, dex: 1.8, wil: 1.8 }
   },
@@ -281,6 +311,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, con: 1.8, wil: 1.8 }
   },
@@ -290,6 +321,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 58 },
+    difficulty: 'Very Hard',
     knowledge_cap: 114,
     knowledge: { base: 6, con: 3.4, wil: 2.6 }
   },
@@ -299,6 +331,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
   },
@@ -308,6 +341,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, dex: 2.4, per: 1.8, str: 1.8 }
   },
@@ -317,6 +351,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Númenórean'],
     pracs: { max: 21, Orc: 10, Troll: 8 },
+    difficulty: 'Easy',
     knowledge_cap: 114,
     knowledge: { base: 6, dex: 3.0, wil: 2.0, str: 1.0 }
   },
@@ -326,6 +361,7 @@ export const skillsList = [
     factions: ['Renegades'],
     exclude_races: [],
     pracs: { max: 21 },
+    difficulty: 'Easy',
     knowledge_cap: 114,
     knowledge: { base: 6, dex: 3.0, wil: 2.0, str: 1.0 }
   },
@@ -335,6 +371,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Orc', 'Númenórean'],
     pracs: { max: 34 },
+    difficulty: 'Hard',
     knowledge_cap: 104,
     knowledge: { base: 3.2, str: 2.4, dex: 1.6, wil: 1.6 }
   },
@@ -344,6 +381,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, dex: 1.8, per: 1.8 }
   },
@@ -353,6 +391,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, dex: 1.8, per: 1.8 }
   },
@@ -362,6 +401,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron', 'Renegades'],
     exclude_races: ['Númenórean'],
     pracs: { max: 29, Troll: 23 },
+    difficulty: 'Normal',
     knowledge_cap: 114,
     knowledge: { base: 6, str: 2.4, con: 1.8, wil: 1.8 }
   },
@@ -373,6 +413,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -382,6 +423,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 8 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -391,6 +433,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -400,6 +443,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 7, Númenórean: 7 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -409,6 +453,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -418,6 +463,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 9 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -427,6 +473,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 8 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -436,6 +483,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 16 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -445,6 +493,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll', 'Númenórean'],
     pracs: { max: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -454,6 +503,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 3 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -472,6 +522,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 8 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -481,6 +532,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 22, Númenórean: 19 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -490,6 +542,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -499,6 +552,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 22, Númenórean: 13 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -508,6 +562,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 11 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -517,6 +572,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -526,6 +582,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -535,6 +592,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -544,6 +602,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -553,6 +612,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -562,6 +622,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 10 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -571,6 +632,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 22, Númenórean: 22 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -580,6 +642,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 8 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -589,6 +652,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 9 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -598,6 +662,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 22, Númenórean: 22 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -607,6 +672,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -616,6 +682,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 11, Númenórean: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, per: 1.2 }
   },
@@ -625,6 +692,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -634,6 +702,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -643,6 +712,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -652,6 +722,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 13 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -661,6 +732,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -670,6 +742,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 13 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
@@ -679,6 +752,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 5, Númenórean: 5 },
+    difficulty: 'Very Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
   },
@@ -688,6 +762,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 10, Númenórean: 8 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
   },
@@ -699,6 +774,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 22 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 2.6, int: 1.8, wil: 1.2 }
   },
@@ -708,6 +784,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -717,6 +794,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 9 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -726,6 +804,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -735,6 +814,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -744,6 +824,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -753,6 +834,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 12 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -762,6 +844,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 8 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -771,6 +854,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 9, Númenórean: 3 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -780,6 +864,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 12 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -789,6 +874,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -798,6 +884,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 12 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -807,6 +894,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -816,6 +904,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 8 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 2.6, int: 1.8, per: 1.2 }
   },
@@ -825,6 +914,7 @@ export const skillsList = [
     factions: [],
     exclude_races: [],
     pracs: { max: 8 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 2.6, int: 1.8, per: 1.2 }
   },
@@ -834,6 +924,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -843,6 +934,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 2.6, int: 1.8, per: 1.2 }
   },
@@ -852,6 +944,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -861,6 +954,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 15 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -870,6 +964,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -879,6 +974,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 10 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -888,6 +984,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 18 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -897,6 +994,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 3 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -906,6 +1004,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 6 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   }, 
@@ -915,6 +1014,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 25, Númenórean: 18 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -924,6 +1024,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 9, Númenórean: 8 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -933,6 +1034,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 9, Númenórean: 9 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -942,6 +1044,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 8 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -951,6 +1054,7 @@ export const skillsList = [
     factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 18, Númenórean: 11 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -960,6 +1064,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 23 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -969,6 +1074,7 @@ export const skillsList = [
     factions: ['Freefolk'],
     exclude_races: [],
     pracs: { max: 23 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -980,8 +1086,9 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
-    knowledge_cap: 112,
-    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
+    difficulty: 'Hard',
+    knowledge_cap: 102,
+    knowledge: { base: 24.8, int: 2.8, wis: 2.2 }
   },
   {
     name: 'Black Breath',
@@ -989,6 +1096,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 35 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
   },
@@ -998,6 +1106,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 22 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1007,6 +1116,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 14 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
   },
@@ -1016,6 +1126,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1025,6 +1136,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
   },
@@ -1034,6 +1146,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 7, Orc: 4 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
   },
@@ -1042,7 +1155,8 @@ export const skillsList = [
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 10 },
+    pracs: { max: 8, Orc: 10 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
   },
@@ -1052,6 +1166,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 13 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
   },
@@ -1061,6 +1176,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12, Orc: 4 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1070,6 +1186,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12, Orc: 4 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1079,6 +1196,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12, Orc: 8 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1088,6 +1206,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 9 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1097,6 +1216,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12, Orc: 12 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1106,6 +1226,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12, Orc: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1115,6 +1236,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -1124,6 +1246,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1133,6 +1256,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 8, Orc: 8 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
   },
@@ -1142,6 +1266,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 8, Orc: 6 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
   },
@@ -1151,6 +1276,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 8, Orc: 6 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1160,6 +1286,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
   },
@@ -1169,6 +1296,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
   },
@@ -1178,6 +1306,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
   },
@@ -1187,6 +1316,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 22 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 7.6, wis: 3.8, int: 2.6 }
   },
@@ -1196,6 +1326,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 35 },
+    difficulty: 'Very Hard',
     knowledge_cap: 110,
     knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
   },
@@ -1205,6 +1336,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
   },
@@ -1214,6 +1346,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12, Orc: 10 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, wil: 1.2 }
   },
@@ -1223,6 +1356,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1232,6 +1366,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 26 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 9.6, wis: 3.8, wil: 2.6 }
   },
@@ -1241,6 +1376,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 7 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },
@@ -1250,6 +1386,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 6 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1259,6 +1396,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 9, Orc: 6 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1268,8 +1406,9 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
-    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
+    knowledge: { base: 24.8, int: 2.8, wis: 2.2 }
   },
   {
     name: 'Shocking Grasp',
@@ -1277,6 +1416,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 11 },
+    difficulty: 'Normal',
     knowledge_cap: 112,
     knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
   },
@@ -1286,6 +1426,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16, Orc: 5 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
   },
@@ -1295,6 +1436,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12 },
+    difficulty: 'Easy',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1304,6 +1446,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18, Orc: 8 },
+    difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
   },
@@ -1313,6 +1456,7 @@ export const skillsList = [
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 23, Orc: 17 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
   },

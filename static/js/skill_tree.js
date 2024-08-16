@@ -43,29 +43,29 @@ export class SkillTree {
   // filter icon at top
   setupSkillFilter() {
     document.querySelector('.filter-pracs').addEventListener('click', function() {
-      const skillsList = document.getElementById('skills-list');
+      let skills_list = document.getElementById('skills-list');
       
       this.classList.toggle('enabled');
-      skillsList.classList.toggle('show-learned');
+      skills_list.classList.toggle('show-learned');
       
       // Toggle visibility of .skill elements
-      skillsList.querySelectorAll('.skill').forEach(skill => {
+      skills_list.querySelectorAll('.skill').forEach(skill => {
         if (!skill.classList.contains('learned')) {
-          skill.style.display = skillsList.classList.contains('show-learned') ? 'none' : '';
+          skill.style.display = skills_list.classList.contains('show-learned') ? 'none' : '';
         }
       });
     });
   }
 
   startFiltered() {
-    const skillsList = document.getElementById('skills-list');
+    const skills_list = document.getElementById('skills-list');
 
     document.querySelector('.filter-pracs').classList.add('enabled');
-    skillsList.classList.add('show-learned');
+    skills_list.classList.add('show-learned');
 
-    skillsList.querySelectorAll('.skill').forEach(skill => {
+    skills_list.querySelectorAll('.skill').forEach(skill => {
       if (!skill.classList.contains('learned')) {
-        skill.style.display = skillsList.classList.contains('show-learned') ? 'none' : '';
+        skill.style.display = skills_list.classList.contains('show-learned') ? 'none' : '';
       }
     });
   }
@@ -301,6 +301,14 @@ export class SkillTree {
   updateKnowledge() {
     console.log("update knowledge");
 
+    const difficultyModifiers = {
+      "Very Easy": 1.1,
+      "Easy": 1.05,
+      "Normal": 1.0,
+      "Hard": 0.95,
+      "Very Hard": 0.9
+  };
+
     let skillElements = document.querySelectorAll('.skill');
     skillElements.forEach(skillElement => {
       let pracs_input = skillElement.querySelector('.pracs-input');
@@ -309,8 +317,9 @@ export class SkillTree {
 
       let pracs_spent   = parseInt(pracs_input.value);
       let pracs_max     = parseInt(pracs_input.max);
-      let knowledge_max = parseInt(knowledge_max_span.textContent);
-      let knowledge_current = knowledge_max/pracs_max * pracs_spent;
+  
+      let skill_name = skillElement.getAttribute('data-skill');
+
 
       if (pracs_spent > 0) {
         skillElement.classList.add('learned');
@@ -318,46 +327,43 @@ export class SkillTree {
         skillElement.classList.remove('learned');
       }
 
-      // Weights: first prac worth 3x, last prac worth 1/3x
-      let start_weight = 3;
-      let end_weight = 1 / 3;
-      let weight_decrement = (start_weight - end_weight) / (pracs_max - 1);
+      let skill_data = skillsList.find(skill =>
+        skill.name === skill_name &&
+        skill.factions.includes(this.character.faction) &&
+        !skill.exclude_races.includes(this.character.race)
+      );
 
-      let total_weight = 0;
-      let current_weight = start_weight;
+      let k_max = parseInt(knowledge_max_span.textContent);
+      let k_diffmod = difficultyModifiers[skill_data.difficulty];
+      let k_scale = 2.8 * k_diffmod; 
 
-      for (let i = 1; i <= pracs_spent; i++) {
-        total_weight += current_weight;
-        current_weight -= weight_decrement;
+      let k_increase = k_max * Math.pow(pracs_spent / pracs_max, 1 / k_scale);
+      let k_current = Math.round(k_increase);
+
+      if (skill_data.name == "Armour" && skill_data.class == "Shaman") {
+        console.log("pracs spent: ", pracs_spent);
+        console.log("knowledge max: ", k_max);
+        console.log("knowledge scale: ", k_scale);
+        console.log("knowledge diffmod: ", k_diffmod);
+        console.log("knowledge increase: ", k_increase);
+        console.log("knowledge_curr: ", k_current);
       }
-
-      let max_total_weight = 0;
-      current_weight = start_weight;
-      for (let i = 1; i <= pracs_max; i++) {
-        max_total_weight += current_weight;
-        current_weight -= weight_decrement;
-      }
-
-      knowledge_current = (total_weight / max_total_weight) * knowledge_max;
-      knowledge_current = Math.round(knowledge_current);
 
       if (pracs_input.getAttribute('data-class') !== 'Ranger') {
-        knowledge_current = this.calcMultiClass(pracs_input, knowledge_current);
+        k_current = this.calcMultiClass(pracs_input, k_current);
       }
 
       let faction = charInfo.factions.find(f => f.name === this.character.faction);
       let race = faction.races.find(r => r.name === this.character.race);
       let subrace = race.subraces.find(sr => sr.name === this.character.subrace);
-
-      let skill_name = skillElement.getAttribute('data-skill');
       let subrace_trait = subrace.traits.find(trait => trait.skill === skill_name);
 
       if (subrace_trait) {
         console.log("adding trait amount: ", subrace_trait.amount);
-        knowledge_current += subrace_trait.amount;
+        k_current += subrace_trait.amount;
       }
 
-      knowledge_span.textContent = `${knowledge_current}%`;
+      knowledge_span.textContent = `${k_current}%`;
     });
   }
 }
