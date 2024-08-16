@@ -340,15 +340,6 @@ export class SkillTree {
       let k_increase = k_max * Math.pow(pracs_spent / pracs_max, 1 / k_scale);
       let k_current = Math.round(k_increase);
 
-      if (skill_data.name == "Armour" && skill_data.class == "Shaman") {
-        console.log("pracs spent: ", pracs_spent);
-        console.log("knowledge max: ", k_max);
-        console.log("knowledge scale: ", k_scale);
-        console.log("knowledge diffmod: ", k_diffmod);
-        console.log("knowledge increase: ", k_increase);
-        console.log("knowledge_curr: ", k_current);
-      }
-
       if (pracs_input.getAttribute('data-class') !== 'Ranger') {
         k_current = this.calcMultiClass(pracs_input, k_current);
       }
