@@ -320,13 +320,6 @@ export class SkillTree {
   
       let skill_name = skillElement.getAttribute('data-skill');
 
-
-      if (pracs_spent > 0) {
-        skillElement.classList.add('learned');
-      } else {
-        skillElement.classList.remove('learned');
-      }
-
       let skill_data = skillsList.find(skill =>
         skill.name === skill_name &&
         skill.factions.includes(this.character.faction) &&
@@ -352,6 +345,12 @@ export class SkillTree {
       if (subrace_trait) {
         console.log("adding trait amount: ", subrace_trait.amount);
         k_current += subrace_trait.amount;
+      }
+
+      if (pracs_spent > 0 || k_current > 0) {
+        skillElement.classList.add('learned');
+      } else {
+        skillElement.classList.remove('learned');
       }
 
       knowledge_span.textContent = `${k_current}%`;
