@@ -77,7 +77,7 @@ export const charInfo = {
             },
             { 
               name: 'Stoor', 
-              traits: [ {skill: 'Endurance', amount: 10} ],
+              traits: [ {skill: 'Endurance', amount: 10}, {skill: 'Swim', amount: 25} ],
             },
           ]
         },
@@ -92,16 +92,16 @@ export const charInfo = {
           subraces: [
             { 
               name: 'Beorning', 
-              traits: [ {skill: 'Wilderness', amount: 10} ],
+              traits: [ {skill: 'Wilderness', amount: 25} ],
             },
             { 
               name: 'Rohirrim', 
-              traits: [ {skill: 'Riding', amount: 10} ],
+              traits: [ {skill: 'Riding', amount: 25} ],
             },
             { 
               name: 'Dúnadan', 
               traits: [
-                {skill: 'Leadership', amount: 10},
+                {skill: 'Leadership', amount: 25},
                 {skill: 'Track', amount: 10},
               ],
             },
