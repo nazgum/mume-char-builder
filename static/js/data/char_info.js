@@ -96,7 +96,7 @@ export const charInfo = {
             },
             { 
               name: 'Rohirrim', 
-              traits: [ {skill: 'Riding', amount: 25} ],
+              traits: [ {skill: 'Ride', amount: 25} ],
             },
             { 
               name: 'Dúnadan', 
