@@ -329,7 +329,7 @@ export class SkillTree {
       let k_max = parseInt(knowledge_max_span.textContent);
       let k_diffmod = difficultyModifiers[skill_data.difficulty];
       let k_scale = 2.8 * k_diffmod; 
-      if (pracs_input.getAttribute('data-class') == "Ranger") { k_scale = 1.6 * k_diffmod; }
+      if (pracs_input.getAttribute('data-class') == "Ranger") { k_scale = 1.4 * k_diffmod; }
 
       let k_increase = k_max * Math.pow(pracs_spent / pracs_max, 1 / k_scale);
       let k_current = Math.round(k_increase);

@@ -99,7 +99,7 @@ export const skillsList = [
     pracs: { max: 27 },
     difficulty: 'Normal',
     knowledge_cap: 152,
-    knowledge: { base: 16.9, int: 2.5, per: 3.8 }
+    knowledge: { base: 14.8, int: 2.8, per: 3.6 }
   },
   {
     name: 'Wilderness',
@@ -109,7 +109,7 @@ export const skillsList = [
     pracs: { max: 27 },
     difficulty: 'Normal',
     knowledge_cap: 152,
-    knowledge: { base: 0, str: 3.6, wil: 4.85 }
+    knowledge: { base: 21, str: 2.8, wil: 3.6 }
   },
 
   // THIEF
