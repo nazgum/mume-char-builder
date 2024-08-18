@@ -283,7 +283,7 @@ export const skillsList = [
     pracs: { max: 43, Orc: 43, Troll: 40 },
     difficulty: 'Hard',
     knowledge_cap: 114,
-    knowledge: { base: 6, str: 3.0, dex: 2.0, wil: 1.0 }
+    knowledge: { base: 18, str: 2.4, dex: 2.4, wil: 1.8 }
   },
   {
     name: 'Charge',
@@ -343,7 +343,7 @@ export const skillsList = [
     pracs: { max: 29, Troll: 23 },
     difficulty: 'Normal',
     knowledge_cap: 114,
-    knowledge: { base: 6, dex: 2.4, per: 1.8, str: 1.8 }
+    knowledge: { base: 24, dex: 1.8, per: 1.8, str: 1.4 }
   },
   {
     name: 'Rescue',
