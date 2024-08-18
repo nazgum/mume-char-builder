@@ -1088,8 +1088,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 102,
-    knowledge: { base: 24.8, int: 2.8, wis: 2.2 }
+    knowledge_cap: 98,
+    knowledge: { base: 30.2, int: 2.6, wis: 1.8 }
   },
   {
     name: 'Black Breath',
@@ -1138,8 +1138,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 11 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+    knowledge_cap: 102,
+    knowledge: { base: 10.0, int: 2.8, wis: 1.8, per: 1.2 }
   },
   {
     name: 'Call Familiar',
@@ -1158,8 +1158,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 8, Orc: 10 },
     difficulty: 'Easy',
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+    knowledge_cap: 102,
+    knowledge: { base: 10.0, int: 2.8, wis: 1.8, per: 1.2 }
   },
   {
     name: 'Control Weather',
@@ -1288,8 +1288,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
+    knowledge_cap: 98,
+    knowledge: { base: 30.2, int: 2.6, wis: 1.8 }
   },
   {
     name: 'Energy Drain',
@@ -1338,8 +1338,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+    knowledge_cap: 102,
+    knowledge: { base: 10.0, int: 2.8, wis: 1.8, per: 1.2 }
   },
   {
     name: 'Locate Magic',
@@ -1409,7 +1409,7 @@ export const skillsList = [
     pracs: { max: 16 },
     difficulty: 'Hard',
     knowledge_cap: 112,
-    knowledge: { base: 24.8, int: 2.8, wis: 2.2 }
+    knowledge: { base: 30.2, int: 2.6, wis: 1.8 }
   },
   {
     name: 'Shocking Grasp',
@@ -1418,8 +1418,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 11 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+    knowledge_cap: 102,
+    knowledge: { base: 10.0, int: 2.8, wis: 1.8, per: 1.2 }
   },
   {
     name: 'Shroud',
