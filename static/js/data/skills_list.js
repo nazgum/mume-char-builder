@@ -1128,8 +1128,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 93,
+    knowledge: { base: 24.2, wis: 2.8, int: 1.6 }
   },
   {
     name: 'Burning Hands',
@@ -1228,7 +1228,7 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 11, Orc: 11 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
+    knowledge_cap: 93,
     knowledge: { base: 3, wis: 3.4, int: 2.4 }
   },
   {
