@@ -1098,8 +1098,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 35 },
     difficulty: 'Very Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
+    knowledge_cap: 108,
+    knowledge: { base: 12, wis: 3.6, wil: 2.4 }
   },
   {
     name: 'Blind',
@@ -1108,8 +1108,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 22 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 104,
+    knowledge: { base: 11, wis: 3.4, wil: 2.4 }
   },
   {
     name: 'Break Door',
@@ -1118,8 +1118,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 14 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.2, wil: 2.4 }
+    knowledge_cap: 108,
+    knowledge: { base: 12, wis: 3.6, wil: 2.4 }
   },
   {
     name: 'Breath of Briskness',
@@ -1176,20 +1176,20 @@ export const skillsList = [
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 4 },
+    pracs: { max: 5, Orc: 4 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 84,
+    knowledge: { base: 15.2, wis: 2.8, int: 1.6 }
   },
   {
     name: 'Create Water',
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 4 },
+    pracs: { max: 5, Orc: 4 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 84,
+    knowledge: { base: 15.2, wis: 2.8, int: 1.6 }
   },
   {
     name: 'Cure Blind',
@@ -1208,8 +1208,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 9 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 88,
+    knowledge: { base: 16.2, wis: 2.8, int: 1.8 }
   },
   {
     name: 'Cure Light',
@@ -1226,10 +1226,10 @@ export const skillsList = [
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 12, Orc: 11 },
+    pracs: { max: 11, Orc: 11 },
     difficulty: 'Normal',
     knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge: { base: 3, wis: 3.4, int: 2.4 }
   },
   {
     name: 'Curse',
@@ -1248,8 +1248,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 11 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 93,
+    knowledge: { base: 24.2, wis: 2.8, int: 1.6 }
   },
   {
     name: 'Detect Invis',
@@ -1258,18 +1258,18 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 8, Orc: 8 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+    knowledge_cap: 96,
+    knowledge: { base: 10, int: 2.6, wis: 1.6, per: 1.2 }
   },
   {
     name: 'Detect Magic',
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 8, Orc: 6 },
+    pracs: { max: 6, Orc: 6 },
     difficulty: 'Easy',
-    knowledge_cap: 112,
-    knowledge: { base: 10.6, int: 2.8, wis: 1.8, per: 1.2 }
+    knowledge_cap: 96,
+    knowledge: { base: 10, int: 2.6, wis: 1.6, per: 1.2 }
   },
   {
     name: 'Detect Poison',
@@ -1298,8 +1298,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
+    knowledge_cap: 108,
+    knowledge: { base: 12, wis: 3.6, wil: 2.4 }
   },
   {
     name: 'Fear',
@@ -1308,8 +1308,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
+    knowledge_cap: 108,
+    knowledge: { base: 12, wis: 3.6, wil: 2.4 }
   },
   {
     name: 'Harm',
@@ -1318,8 +1318,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 22 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 7.6, wis: 3.8, int: 2.6 }
+    knowledge_cap: 101,
+    knowledge: { base: 11, wis: 3.4, int: 2.4 }
   },
   {
     name: 'Hold',
@@ -1328,8 +1328,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 35 },
     difficulty: 'Very Hard',
-    knowledge_cap: 110,
-    knowledge: { base: 7.6, wis: 3.8, wil: 2.6 }
+    knowledge_cap: 108,
+    knowledge: { base: 12, wis: 3.6, wil: 2.4 }
   },
   {
     name: 'Lightning Bolt',
@@ -1358,8 +1358,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 18 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 108,
+    knowledge: { base: 12, wis: 3.6, wil: 2.4 }
   },
   {
     name: 'Raise Dead',
@@ -1368,8 +1368,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 26 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 9.6, wis: 3.8, wil: 2.6 }
+    knowledge_cap: 108,
+    knowledge: { base: 12, wis: 3.6, wil: 2.4 }
   },
   {
     name: 'Remove Curse',
@@ -1386,20 +1386,20 @@ export const skillsList = [
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 6 },
+    pracs: { max: 7, orc: 6 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 77,
+    knowledge: { base: 5, wis: 2.8, int: 1.8 }
   },
   {
     name: 'Sense Life',
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 9, Orc: 6 },
+    pracs: { max: 7, Orc: 6 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 77,
+    knowledge: { base: 5, wis: 2.8, int: 1.8 }
   },
   {
     name: 'Shield',
@@ -1426,7 +1426,7 @@ export const skillsList = [
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 16, Orc: 5 },
+    pracs: { max: 8, Orc: 5 },
     difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 9.6, int: 3.6, wis: 2.4 }
@@ -1438,8 +1438,8 @@ export const skillsList = [
     exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 12 },
     difficulty: 'Easy',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, wis: 3.8, int: 2.4 }
+    knowledge_cap: 105,
+    knowledge: { base: 8.2, wis: 3.8, int: 2.4 }
   },
   {
     name: 'Strength',
