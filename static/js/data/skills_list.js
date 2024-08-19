@@ -414,18 +414,29 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+    knowledge_cap: 110,
+    knowledge: { base: 30.6, int: 2.6, wis: 1.8 }
   },
   {
     name: 'Block Door',
     class: 'Mage',
-    factions: ['Freefolk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 11, Númenórean: 8 },
+    factions: ['Freefolk'],
+    exclude_races: [],
+    pracs: { max: 11 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+    knowledge_cap: 110,
+    knowledge: { base: 30.6, int: 2.6, wil: 1.8 }
+
+  },
+  {
+    name: 'Block Door',
+    class: 'Mage',
+    factions: ['Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 8 },
+    difficulty: 'Normal',
+    knowledge_cap: 110,
+    knowledge: { base: 21.6, int: 2.6, wil: 1.8 }
   },
   {
     name: 'Burning Hands',
@@ -604,18 +615,28 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+    knowledge_cap: 110,
+    knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
   },
   {
     name: 'Locate Life',
     class: 'Mage',
-    factions: ['Freefolk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 12 },
+    factions: ['Freefolk'],
+    exclude_races: [],
+    pracs: { max: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+    knowledge_cap: 110,
+    knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
+  },
+  {
+    name: 'Locate Life',
+    class: 'Mage',
+    factions: ['Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12 },
+    difficulty: 'Hard',
+    knowledge_cap: 110,
+    knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
   },
   {
     name: 'Locate Magic',
@@ -624,18 +645,18 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12, Númenórean: 10 },
     difficulty: 'Normal',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+    knowledge_cap: 110,
+    knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
   },
   {
     name: 'Magic Blast',
     class: 'Mage',
     factions: ['Sauron'],
     exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 22, Númenórean: 22 },
+    pracs: { max: 22 },
     difficulty: 'Very Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+    knowledge_cap: 110,
+    knowledge: { base: 56, int: 2.0, wil: 1.0 }
   },
   {
     name: 'Magic Missile',
@@ -670,12 +691,22 @@ export const skillsList = [
   {
     name: 'Scry',
     class: 'Mage',
-    factions: ['Freefolk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 12 },
+    factions: ['Freefolk'],
+    exclude_races: [],
+    pracs: { max: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 2.6, wis: 1.8, wil: 1.2 }
+    knowledge_cap: 110,
+    knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
+  },
+  {
+    name: 'Scry',
+    class: 'Mage',
+    factions: ['Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 12 },
+    difficulty: 'Hard',
+    knowledge_cap: 110,
+    knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
   },
   {
     name: 'Shocking Grasp',
@@ -694,8 +725,8 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+    knowledge_cap: 110,
+    knowledge: { base: 30.6, int: 2.6, wis: 1.8 }
   },
   {
     name: 'Shroud',
@@ -704,8 +735,8 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 16, Númenórean: 12 },
     difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+    knowledge_cap: 110,
+    knowledge: { base: 9.2, int: 3.2, wis: 2.4 }
   },
   {
     name: 'Silence',
@@ -740,12 +771,22 @@ export const skillsList = [
   {
     name: 'Teleport',
     class: 'Mage',
-    factions: ['Freefolk', 'Sauron'],
-    exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 16, Númenórean: 13 },
+    factions: ['Freefolk'],
+    exclude_races: [],
+    pracs: { max: 16 },
     difficulty: 'Hard',
     knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+    knowledge: { base: 29, int: 2.8, wil: 1.6 }
+  },
+  {
+    name: 'Teleport',
+    class: 'Mage',
+    factions: ['Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 13 },
+    difficulty: 'Hard',
+    knowledge_cap: 112,
+    knowledge: { base: 29, int: 2.8, wil: 1.6 }
   },
   {
     name: 'Ventriloquate',
