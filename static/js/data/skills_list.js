@@ -39,7 +39,7 @@ export const skillsList = [
     pracs: { max: 13, Orc: 13, Troll: 3, Númenórean: 13 },
     difficulty: 'Very Easy',
     knowledge_cap: 152,
-    knowledge: { base: 18, dex: 3, wil: 2, str: 1.25 }
+    knowledge: { base: 40, dex: 2.4, wil: 1.8, str: 1.4 }
   },
   {
     name: 'Command',
