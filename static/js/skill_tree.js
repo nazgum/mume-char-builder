@@ -268,17 +268,10 @@ export class SkillTree {
     console.log("pracs spent: ", this.pracsSpent);
   }
 
-  calcMultiClass(pracs_input, knowledge_current) {
+  calcMultiClass(pracs_input, knowledge_current, knowledge_max) {
     //let total_pracs = 0
     let skill_class = pracs_input.getAttribute('data-class');
 
-    // Iterate over pracsSpent object
-    /*for (let [class_name, pracs] of Object.entries(this.pracsPerClass)) {
-      // Exclude pracs for "Ranger" and the current class
-      if (class_name !== "Ranger" && class_name !== skill_class) {
-          total_pracs += pracs;
-      }
-    }*/
     // Precompute total pracs outside of the loop
     let total_pracs = Object.entries(this.pracsPerClass).reduce((total, [class_name, pracs]) => {
       if (class_name !== "Ranger" && class_name !== skill_class) {
@@ -287,12 +280,13 @@ export class SkillTree {
       return total;
     }, 0);
 
-    // Calculate the total drop using a fixed weight of 0.1
-    let drop = total_pracs * 0.1;
-    
-    // Apply the drop and enforce the minimum cap
+    // Calculate the proportional drop based on how close current knowledge is to max
+    let base_drop = total_pracs * 0.1;
     let max_drop = 25;
-    let min_knowledge = Math.max(0, Math.round(knowledge_current - max_drop));
+    let proportion = knowledge_current / knowledge_max;
+    let drop = Math.min(base_drop, proportion * max_drop);
+
+    let min_knowledge = Math.max(0, Math.round(knowledge_current - drop));
     let knowledge = Math.round(knowledge_current - drop);
 
     return Math.max(knowledge, min_knowledge);
@@ -335,7 +329,7 @@ export class SkillTree {
       let k_current = Math.round(k_increase);
 
       if (pracs_input.getAttribute('data-class') !== 'Ranger') {
-        k_current = this.calcMultiClass(pracs_input, k_current);
+        k_current = this.calcMultiClass(pracs_input, k_current, k_max);
       }
 
       let faction = charInfo.factions.find(f => f.name === this.character.faction);
