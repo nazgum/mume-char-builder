@@ -99,7 +99,10 @@ export const skillsList = [
     pracs: { max: 27 },
     difficulty: 'Normal',
     knowledge_cap: 152,
-    knowledge: { base: 14.8, int: 2.8, per: 3.6 }
+    knowledge: { base: 20.5, int: 2.5, per: 3.5 }
+    // 15 int 12 per = 100%
+    // 14 int 13 per = 101%
+    // 13 int 16 per = 111%
   },
   {
     name: 'Wilderness',
