@@ -100,6 +100,7 @@ export const skillsList = [
     difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 20.5, int: 2.5, per: 3.5 }
+    // 18 int 11 per = 100%
     // 15 int 12 per = 100%
     // 14 int 13 per = 101%
     // 13 int 16 per = 111%
@@ -480,6 +481,7 @@ export const skillsList = [
     difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+    // int 18 wis 11 = 107%
   },
   {
     name: 'Chill Touch',
@@ -1146,6 +1148,8 @@ export const skillsList = [
     difficulty: 'Very Hard',
     knowledge_cap: 108,
     knowledge: { base: 12, wis: 3.6, wil: 2.4 }
+    // wis 16 wil 14 = 103%
+    // wis 14 wil 10 = 94%
   },
   {
     name: 'Blind',
@@ -1176,6 +1180,8 @@ export const skillsList = [
     difficulty: 'Hard',
     knowledge_cap: 93,
     knowledge: { base: 24.2, wis: 2.8, int: 1.6 }
+    // int 15 wis 16 = 93%
+    // int 13 wis 14 = 85%
   },
   {
     name: 'Burning Hands',
@@ -1346,6 +1352,8 @@ export const skillsList = [
     difficulty: 'Hard',
     knowledge_cap: 108,
     knowledge: { base: 12, wis: 3.6, wil: 2.4 }
+    // wis 16 wil 14 = 94% 
+    // wis 14 wil 10 = 85%
   },
   {
     name: 'Fear',

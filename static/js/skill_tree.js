@@ -272,10 +272,27 @@ export class SkillTree {
     //let total_pracs = 0
     let skill_class = pracs_input.getAttribute('data-class');
 
+    // Define class relationships and scaling factors
+    let class_modifiers = {
+      "Thief": { "Priest": 1.4, "Shaman": 1.4 },
+      "Priest": { "Thief": 1.4 },
+      "Warrior": { "Mage": 1.4, "Shaman": 1.2 },
+      "Mage": { "Warrior": 1.4 },
+      "Shaman": { "Warrior": 1.2, "Thief": 1.4}
+    };
+
     // Precompute total pracs outside of the loop
     let total_pracs = Object.entries(this.pracsPerClass).reduce((total, [class_name, pracs]) => {
       if (class_name !== "Ranger" && class_name !== skill_class) {
-        return total + pracs;
+
+        let modifier = 1; // Default multiplier is 1
+
+        // Apply the scaling modifier if the class relationship exists
+        if (classModifiers[skill_class] && classModifiers[skill_class][class_name]) {
+          modifier = classModifiers[skill_class][class_name];
+        }
+
+        return total + (pracs * modifier);
       }
       return total;
     }, 0);
