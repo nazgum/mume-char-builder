@@ -288,8 +288,8 @@ export class SkillTree {
         let modifier = 1; // Default multiplier is 1
 
         // Apply the scaling modifier if the class relationship exists
-        if (classModifiers[skill_class] && classModifiers[skill_class][class_name]) {
-          modifier = classModifiers[skill_class][class_name];
+        if (class_modifiers[skill_class] && class_modifiers[skill_class][class_name]) {
+          modifier = class_modifiers[skill_class][class_name];
         }
 
         return total + (pracs * modifier);
