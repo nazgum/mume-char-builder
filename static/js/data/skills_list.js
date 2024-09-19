@@ -125,7 +125,7 @@ export const skillsList = [
     pracs: { max: 16 },
     difficulty: 'Normal',
     knowledge_cap: 114,
-    knowledge: { base: 15, dex: 3.0, wil: 2.45 }
+    knowledge: { base: 6, dex: 3.1, wil: 2.6 }
   },
   {
     name: 'Backstab',
@@ -135,7 +135,7 @@ export const skillsList = [
     pracs: { max: 23 },
     difficulty: 'Hard',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
     name: 'Dodge',
@@ -145,7 +145,7 @@ export const skillsList = [
     pracs: { max: 23, Númenórean: 18 },
     difficulty: 'Hard',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
     name: 'Envenom',
@@ -155,7 +155,7 @@ export const skillsList = [
     pracs: { max: 23 },
     difficulty: 'Hard',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, int: 2.45 }
+    knowledge: { base: 6, dex: 3.1, int: 2.6 }
   },
   {
     name: 'Escape',
@@ -165,7 +165,7 @@ export const skillsList = [
     pracs: { max: 16, Troll: 8, Númenórean: 13 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
     name: 'Hide',
@@ -175,7 +175,7 @@ export const skillsList = [
     pracs: { max: 16 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
     name: 'Missile',
@@ -185,7 +185,7 @@ export const skillsList = [
     pracs: { max: 16 },
     difficulty: 'Normal',
     knowledge_cap: 114,
-    knowledge: { base: 15, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 2.6, per: 3.1 }
   },
   {
     name: 'Missile',
@@ -195,7 +195,7 @@ export const skillsList = [
     pracs: { max: 16, Orc: 13, Númenórean: 5 },
     difficulty: 'Normal',
     knowledge_cap: 114,
-    knowledge: { base: 15, dex: 2.45, per: 3.0 }
+    knowledge: { base: 6, dex: 2.6, per: 3.1 }
   },
   {
     name: 'Pick',
@@ -205,7 +205,7 @@ export const skillsList = [
     pracs: { max: 16 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, int: 2.45 }
+    knowledge: { base: 6, dex: 3.1, int: 2.6 }
   },
   {
     name: 'Pick',
@@ -215,7 +215,7 @@ export const skillsList = [
     pracs: { max: 16, Orc: 8, Númenórean: 5 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, int: 2.45 }
+    knowledge: { base: 6, dex: 3.1, int: 2.6 }
   },
   {
     name: 'Pick',
@@ -225,7 +225,7 @@ export const skillsList = [
     pracs: { max: 16, Orc: 6 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, int: 2.45 }
+    knowledge: { base: 6, dex: 3.1, int: 2.6 }
   },
   {
     name: 'Piercing',
@@ -245,7 +245,7 @@ export const skillsList = [
     pracs: { max: 16, Orc: 3, Troll: 1, Númenórean: 5 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
     name: 'Search',
@@ -255,7 +255,7 @@ export const skillsList = [
     pracs: { max: 16, Orc: 4 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
     name: 'Sneak',
@@ -265,7 +265,7 @@ export const skillsList = [
     pracs: { max: 23 },
     difficulty: 'Hard',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
     name: 'Steal',
@@ -275,7 +275,7 @@ export const skillsList = [
     pracs: { max: 23 },
     difficulty: 'Normal',
     knowledge_cap: 109,
-    knowledge: { base: 10, dex: 3.0, per: 2.45 }
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
 
   // WARRIOR
