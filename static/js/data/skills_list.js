@@ -117,6 +117,9 @@ export const skillsList = [
   },
 
   // THIEF
+  // dex 18 per 18 = 109%
+  // dex 18 per 17 = 106%
+  // dex 17 per 16 = 100%
   {
     name: 'Attack',
     class: 'Thief',
