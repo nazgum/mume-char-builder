@@ -1088,9 +1088,9 @@ export const skillsList = [
   {
     name: 'Strength',
     class: 'Priest',
-    factions: ['Freefolk'],
-    exclude_races: [],
-    pracs: { max: 18 },
+    factions: ['Freefolk', 'Sauron'],
+    exclude_races: ['Orc', 'Troll'],
+    pracs: { max: 18, Númenórean: 8 },
     difficulty: 'Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, wis: 3.2, int: 2.4 }
@@ -1499,7 +1499,7 @@ export const skillsList = [
     name: 'Strength',
     class: 'Shaman',
     factions: ['Sauron'],
-    exclude_races: ['Troll'],
+    exclude_races: ['Troll', 'Númenórean'],
     pracs: { max: 8 },
     difficulty: 'Hard',
     knowledge_cap: 112,
