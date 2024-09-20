@@ -1363,7 +1363,7 @@ export const skillsList = [
     class: 'Shaman',
     factions: ['Sauron'],
     exclude_races: ['Troll', 'Númenórean'],
-    pracs: { max: 18 },
+    pracs: { max: 26 },
     difficulty: 'Hard',
     knowledge_cap: 108,
     knowledge: { base: 12, wis: 3.6, wil: 2.4 }
