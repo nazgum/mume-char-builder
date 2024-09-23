@@ -238,8 +238,9 @@ export const skillsList = [
     pracs: { max: 16 },
     difficulty: 'Normal',
     knowledge_cap: 114,
-    knowledge: { base: 10.5, dex: 2.5, per: 1.75, str: 1.5 }
+    knowledge: { base: 5.5, dex: 2.5, per: 1.75, str: 1.5 }
   },
+  // dex 19 per 18 st 12 = 103%
   {
     name: 'Search',
     class: 'Thief',
