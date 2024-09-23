@@ -274,11 +274,11 @@ export class SkillTree {
 
     // Define class relationships and scaling factors
     let class_modifiers = {
-      "Thief": { "Priest": 1.4, "Shaman": 1.4 },
-      "Priest": { "Thief": 1.4 },
-      "Warrior": { "Mage": 1.4, "Shaman": 1.2 },
-      "Mage": { "Warrior": 1.4 },
-      "Shaman": { "Warrior": 1.2, "Thief": 1.4}
+      "Thief": { "Priest": 1.3, "Shaman": 1.3 },
+      "Priest": { "Thief": 1.3 },
+      "Warrior": { "Mage": 1.3, "Shaman": 1.15 },
+      "Mage": { "Warrior": 1.3 },
+      "Shaman": { "Warrior": 1.15, "Thief": 1.3}
     };
 
     // Precompute total pracs outside of the loop

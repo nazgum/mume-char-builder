@@ -1140,6 +1140,7 @@ export const skillsList = [
     knowledge_cap: 98,
     knowledge: { base: 30.2, int: 2.6, wis: 1.8 }
     // 15 int 16 wis = 98%
+    // 15 int 12 wis = 92%
     // 13 int 14 wis = 91%
   },
   {
