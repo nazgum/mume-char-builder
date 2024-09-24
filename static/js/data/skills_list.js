@@ -79,7 +79,9 @@ export const skillsList = [
     pracs: { max: 13, Orc: 13, Númenórean: 13 },
     difficulty: 'Very Easy',
     knowledge_cap: 152,
-    knowledge: { base: 18, dex: 3.75, wil: 2.5 },
+    knowledge: { base: 16, dex: 3.6, wil: 2.6 },
+    //  base: 18, dex: 3.75, wil: 2.5 },
+    // 12 dex 15 wil = 98%
   },
   {
     name: 'Swim',
@@ -104,6 +106,7 @@ export const skillsList = [
     // 15 int 12 per = 100%
     // 14 int 13 per = 101%
     // 13 int 16 per = 111%
+    // 18 int 10 per = 98%
   },
   {
     name: 'Wilderness',
