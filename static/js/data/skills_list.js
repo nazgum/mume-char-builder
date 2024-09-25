@@ -102,11 +102,10 @@ export const skillsList = [
     difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 20.5, int: 2.5, per: 3.5 }
-    // 18 int 11 per = 100%
+    // 18 int 10 per = 100%
     // 15 int 12 per = 100%
     // 14 int 13 per = 101%
     // 13 int 16 per = 111%
-    // 18 int 10 per = 98%
   },
   {
     name: 'Wilderness',
@@ -435,8 +434,8 @@ export const skillsList = [
     exclude_races: [],
     pracs: { max: 11 },
     difficulty: 'Normal',
-    knowledge_cap: 110,
-    knowledge: { base: 30.6, int: 2.6, wil: 1.8 }
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
 
   },
   {
@@ -446,8 +445,8 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8 },
     difficulty: 'Normal',
-    knowledge_cap: 110,
-    knowledge: { base: 21.6, int: 2.6, wil: 1.8 }
+    knowledge_cap: 112,
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
   {
     name: 'Burning Hands',
@@ -528,7 +527,8 @@ export const skillsList = [
     pracs: { max: 8, Númenórean: 3 },
     difficulty: 'Easy',
     knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wis: 2.4 }
+    knowledge: { base: 13.2, int: 3.2, wis: 2.4 }
+    // int 18 wis 18 = 114%
   },
   {
     name: 'Detect Invis',
@@ -707,7 +707,7 @@ export const skillsList = [
     exclude_races: [],
     pracs: { max: 16 },
     difficulty: 'Hard',
-    knowledge_cap: 110,
+    knowledge_cap: 112,
     knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
   },
   {
@@ -717,7 +717,7 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 12 },
     difficulty: 'Hard',
-    knowledge_cap: 110,
+    knowledge_cap: 112,
     knowledge: { base: 20, int: 2.2, wis: 1.6, wil: 1.2 }
   },
   {
@@ -788,7 +788,8 @@ export const skillsList = [
     pracs: { max: 16 },
     difficulty: 'Hard',
     knowledge_cap: 112,
-    knowledge: { base: 29, int: 2.8, wil: 1.6 }
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
+    // 18 int 18 wil = 112%
   },
   {
     name: 'Teleport',
@@ -798,7 +799,7 @@ export const skillsList = [
     pracs: { max: 13 },
     difficulty: 'Hard',
     knowledge_cap: 112,
-    knowledge: { base: 29, int: 2.8, wil: 1.6 }
+    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
   {
     name: 'Ventriloquate',
