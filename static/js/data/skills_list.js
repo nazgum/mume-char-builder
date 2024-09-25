@@ -526,7 +526,7 @@ export const skillsList = [
     exclude_races: ['Orc', 'Troll'],
     pracs: { max: 8, Númenórean: 3 },
     difficulty: 'Easy',
-    knowledge_cap: 112,
+    knowledge_cap: 114,
     knowledge: { base: 13.2, int: 3.2, wis: 2.4 }
     // int 18 wis 18 = 114%
   },
