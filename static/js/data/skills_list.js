@@ -783,21 +783,10 @@ export const skillsList = [
   {
     name: 'Teleport',
     class: 'Mage',
-    factions: ['Freefolk'],
-    exclude_races: [],
-    pracs: { max: 16 },
-    difficulty: 'Hard',
-    knowledge_cap: 112,
-    knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
-    // 18 int 18 wil = 112%
-  },
-  {
-    name: 'Teleport',
-    class: 'Mage',
-    factions: ['Sauron'],
+    factions: ['Freefolk', 'Sauron'],
     exclude_races: ['Orc', 'Troll'],
-    pracs: { max: 13 },
-    difficulty: 'Hard',
+    pracs: { max: 16, Númenórean: 13 },
+    difficulty: 'Very Hard',
     knowledge_cap: 112,
     knowledge: { base: 11.2, int: 3.2, wil: 2.4 }
   },
