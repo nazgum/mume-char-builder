@@ -41,16 +41,34 @@ export const skillsList = [
     knowledge_cap: 152,
     knowledge: { base: 8, dex: 3.2, wil: 2.4, str: 1.8 }
   },
+  // free people + bns
   {
     name: 'Command',
     class: 'Ranger',
     factions: ['Freefolk', 'Sauron'],
-    exclude_races: ['Troll'],
-    pracs: { max: 27, Orc: 18, Númenórean: 27 },
+    exclude_races: ['Troll', 'Orc'],
+    pracs: { max: 27 },
     difficulty: 'Normal',
     knowledge_cap: 159,
-    knowledge: { base: 15, wil: 4.3, int: 3.7 }
+    knowledge: { base: 11, int: 3.0, wil: 4.0 }
+    // orc int 14 wil 13 = 81%
+    // orc int 14 wil 14 = 85%
+    // orc int 15 wil 14 = 88%
+    // orc int 15 wil 16 = 96%
+    // bn int 18 wil 15 = 125%
   },
+  // orcs
+  {
+    name: 'Command',
+    class: 'Ranger',
+    factions: ['Sauron'],
+    exclude_races: ['Troll','Númenórean'],
+    pracs: { max: 18 },
+    difficulty: 'Normal',
+    knowledge_cap: 95,
+    knowledge: { base: 1.0, int: 2.4, wil: 3.6 }
+  },
+
   {
     name: 'Dark Oath',
     class: 'Ranger',
