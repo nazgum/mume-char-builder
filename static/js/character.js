@@ -117,21 +117,38 @@ export class Character {
   }
 
   calculateMaxPracs(race) {
-    let pracs;
-    if (this.faction === 'Freefolk' || race === 'Númenórean') {
-      if (this.level <= 25) {
-        pracs = 11 * this.level;
-      } else {
-        pracs = (11 * 25) + Math.floor((this.level - 25) / 1.42);
-      }
-    } else {
-      if (this.level <= 25) {
-        pracs = 10 * this.level;
-      } else {
-        pracs = (10 * 25) + Math.floor((this.level - 25) / 1.7);
-      }
+    let basePracsPerLevel;
+    let bonusPracs = 0;
+
+    // Determine base practice sessions per level based on race
+    switch (race) {
+        case 'Freefolk':
+        case 'Númenórean':
+            basePracsPerLevel = 10;
+            bonusPracs = 2; // Starting bonus
+            break;
+        case 'Orc':
+            basePracsPerLevel = 9;
+            bonusPracs = 1; // Starting bonus
+            break;
+        case 'Troll':
+            basePracsPerLevel = 6;
+            bonusPracs = 0; // No starting bonus
+            break;
     }
 
+    // Calculate real level (see Mume news post 2478)
+    let realLevel;
+    if (this.level <= 25) {
+        realLevel = this.level * 1.1; // 110% of a level
+    } else {
+        realLevel = (25 * 1.1) + ((this.level - 25) * 0.0667); // 6.67% per level after 25
+    }
+
+    // Calculate total practice sessions with standard rounding
+    let pracs = Math.round(realLevel * basePracsPerLevel) + bonusPracs;
+
+    // Apply Eriadorian subrace bonus
     if (this.subrace == 'Eriadorian') {
       pracs += 5;
     }
