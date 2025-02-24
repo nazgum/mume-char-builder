@@ -122,7 +122,11 @@ export class Character {
 
     // Determine base practice sessions per level based on race
     switch (race) {
-        case 'Freefolk':
+        case 'Men':
+        case 'Dwarf':
+        case 'Half-Elf':
+        case 'Elf':
+        case 'Hobbit':
         case 'Númenórean':
             basePracsPerLevel = 10;
             bonusPracs = 2; // Starting bonus
