@@ -4,6 +4,9 @@ import { SkillTree } from './skill_tree.js';
 import { Build } from './build.js';
 
 export class Character {
+
+  static base_title = document.evaluate("//title", document.head).iterateNext().textContent;
+
   constructor() {
     this.name           = "";
     this.statGen        = new StatGen(this);
@@ -38,6 +41,7 @@ export class Character {
 
     if (this.build.loading) {
       this.name_input.value = this.name;
+      this.updatePageTitle();
       this.skillTree.startFiltered();
       this.skillTree.updatePracsSpent();
       this.skillTree.updateKnowledge();
@@ -179,6 +183,7 @@ export class Character {
     // name
     this.name_input.addEventListener('change', () => {
       this.name = this.name_input.value;
+      this.updatePageTitle();
     });
 
     // faction btns
@@ -221,5 +226,13 @@ export class Character {
       this.updateLevel();
       this.updateMaxPracs();
     });
+  }
+
+  updatePageTitle() {
+    if (!this.name) {
+      document.title = Character.base_title;
+      return;
+    }
+    document.title = `${this.name} | ${Character.base_title}`;
   }
 }
