@@ -16,6 +16,7 @@ export class Build {
   setupButton() {
     document.getElementById('save-build').addEventListener('click', async () => {
       let data = {
+        name:        this.character.name,
         faction:     this.character.faction,
         race:        this.character.race,
         class:       this.character.class,
@@ -68,6 +69,7 @@ export class Build {
 
   save() {
     let data = {
+      name: this.character.name,
       faction: this.character.faction,
       race: this.character.race,
       class: this.character.class,
@@ -104,6 +106,7 @@ export class Build {
         const buildData = JSON.parse(build_data);
 
         // Restore build properties
+        this.character.name       = buildData.name;
         this.character.faction    = buildData.faction;
         this.character.race       = buildData.race;
         this.character.class      = buildData.class;
