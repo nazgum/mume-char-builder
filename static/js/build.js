@@ -106,7 +106,7 @@ export class Build {
         const buildData = JSON.parse(build_data);
 
         // Restore build properties
-        this.character.name       = buildData.name;
+        this.character.name       = buildData.name || "";
         this.character.faction    = buildData.faction;
         this.character.race       = buildData.race;
         this.character.class      = buildData.class;
