@@ -2,25 +2,27 @@
   <h1>MUME</h1>
   <h3>Char Builder</h3>
 
-  <div id="choose-name">
-    <label for="name">Name:</label>
-    <input id="name"></input>
-  </div>
-
   <div id="faction-btns" class="btn-group">
     <button id="faction-free-folk" data-faction="Freefolk" class="selected">Freefolk</button>
     <button id="faction-sauron" data-faction="Sauron">Sauron</button>
     <button id="faction-renegades" data-faction="Renegades">Renegades</button>
   </div>
 
-  <div id="choose-race">
-    <label for="race">Race:</label>
-    <select id="race"></select>
+  <div class="form-container">
+    <div id="choose-race">
+      <label for="race">Race:</label>
+      <select id="race"></select>
+    </div>
+
+    <div id="choose-subrace">
+      <label for="subrace">Subrace:</label>
+      <select id="subrace"></select>
+    </div>
   </div>
 
-  <div id="choose-subrace">
-    <label for="subrace">Subrace:</label>
-    <select id="subrace"></select>
+  <div id="choose-name">
+    <label for="name">Name:</label>
+    <input type="text" id="name"></input>
   </div>
 
   <div id="choose-level">
@@ -30,7 +32,9 @@
 
   <div id="save-build-field">
     <label for="level">Share:</label>
-    <button id="save-build" class="btn">Get Link</button>
+    <div>
+      <button id="save-build" class="btn">Get Link</button>
+    </div>
   </div>
 
   <svg id="moon-light" class="moon moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path></svg>
