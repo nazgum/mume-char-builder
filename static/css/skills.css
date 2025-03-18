@@ -47,10 +47,16 @@
     margin-bottom: 1em;
 
     .skill-group-title {
+      display: flex;
+      justify-content: space-between;
       /*grid-column: span 2;*/
-      font-weight: bold;
       padding: 0.5em 0.8em;
       background-color: var(--crust);
+
+      .skill-group-pracs { }
+
+      svg { vertical-align: middle; margin-left: 0.5em; }
+      span { font-weight: normal; }
     }
     
     .skill {

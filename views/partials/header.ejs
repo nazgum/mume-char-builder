@@ -19,5 +19,17 @@
         <% } %>
     </script>
     <script type="module" src="/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery.peity.min.js"></script>
+    <script>
+        $.fn.peity.defaults.pie = {
+            delimiter: null,
+            fill: ["#04a5e5", "#e9ebf1"],
+            height: null,
+            width: null,
+            radius: 5,
+        }
+    </script>
 </head>
 <body>

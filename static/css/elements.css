@@ -67,3 +67,6 @@ dialog::backdrop {
   height: 100vh;
   z-index: 5;
 }
+
+span.pie { display: none; }
+svg.peity { display: inline; }

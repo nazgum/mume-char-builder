@@ -6,7 +6,7 @@ export class SkillTree {
     this.character       = character
     this.statGen         = character.statGen
     this.classFilter     = 'all'
-    this.pracsPerClass   = {}
+    this.pracsPerClass   = {"Ranger": 0, "Thief": 0, "Warrior": 0, "Mage": 0, "Shaman": 0}
     this.pracsSpent      = {}
     this.skills_div      = document.getElementById('skills');
     this.skills_tabs     = document.getElementById('skills-tabs');
@@ -117,15 +117,42 @@ export class SkillTree {
       }
     });
 
+    let pracs_total = Object.values(this.pracsSpent).reduce((sum, value) => sum + value, 0);
+
     for (let [skill_class, skillsList] of Object.entries(skill_groups)) {
       let group_div = document.createElement('div');
       group_div.classList.add('skill-group');
       group_div.setAttribute('data-class', skill_class);
+
+      let pracs_spent = this.pracsPerClass[skill_class];
+
+      let pracs_percent = Number(pracs_spent) / Number(pracs_total);
+      if (pracs_total === 0) { pracs_percent = 0; }
+      pracs_percent = Math.round(pracs_percent * 100);
   
       let title_div = document.createElement('div');
       title_div.classList.add('skill-group-title');
-      title_div.textContent = `${skill_class} Skills`;
       group_div.appendChild(title_div);
+
+      let name_div = document.createElement('strong');
+      name_div.classList.add('skill-group-name');
+      name_div.textContent = `${skill_class} Skills`;
+      title_div.appendChild(name_div);
+
+      let pracs_div = document.createElement('span');
+      pracs_div.classList.add('skill-group-pracs');
+      title_div.appendChild(pracs_div);
+
+      let pracs_text = document.createElement('span');
+      pracs_text.classList.add('skill-group-pracs-text');
+      pracs_text.textContent = `${pracs_spent} Pracs (${pracs_percent}%)`;
+      pracs_div.appendChild(pracs_text);
+
+      let pie_chart = document.createElement('span')
+      pie_chart.classList.add('pie')
+      pie_chart.textContent = `${pracs_spent}/${pracs_total}`; 
+      pie_chart.setAttribute('data-peity', '{"radius": 8}');
+      pracs_div.appendChild(pie_chart);
 
       let avail_skills = skillsList.filter(skill => 
         skill.factions.includes(this.character.faction) && !skill.exclude_races.includes(this.character.race)
@@ -223,6 +250,7 @@ export class SkillTree {
 
       new_skills_list.appendChild(group_div);
     }
+    $(".pie").peity("pie");
   }
 
   skillStats(skill) {
@@ -266,6 +294,41 @@ export class SkillTree {
 
     console.log("pracs per class: ", this.pracsPerClass);
     console.log("pracs spent: ", this.pracsSpent);
+
+    this.updatePracCharts()
+    this.updateSkillHeaders()
+  }
+
+  updatePracCharts() {
+    let total = Object.values(this.pracsSpent).reduce((sum, value) => sum + value, 0);
+
+    for (const [className, value] of Object.entries(this.pracsPerClass)) {
+
+      let pie_chart = this.skills_tabs.querySelector(`[data-class="${className}"] .pie`)
+      pie_chart.textContent = `${value}/${total}`; 
+
+      let pie_chart2 = this.skills_div.querySelector(`.skill-group[data-class="${className}"] .pie`)
+      pie_chart2.textContent = `${value}/${total}`; 
+    }
+
+    $(".pie").peity("pie");
+  }
+
+  updateSkillHeaders() {
+    let pracs_total = Object.values(this.pracsSpent).reduce((sum, value) => sum + value, 0);
+
+    for (const [className, value] of Object.entries(this.pracsPerClass)) {
+
+      let pracs_spent = this.pracsPerClass[className];
+ 
+      let pracs_percent = Number(pracs_spent) / Number(pracs_total);
+      if (pracs_total === 0) { pracs_percent = 0; }
+      pracs_percent = Math.round(pracs_percent * 100);
+
+      let pracs_span = this.skills_div.querySelector(`.skill-group[data-class="${className}"] .skill-group-pracs-text`)
+
+      pracs_span.textContent = `${pracs_spent} Pracs (${pracs_percent}%)`;
+    }
   }
 
   calcMultiClass(pracs_input, knowledge_current, knowledge_max) {
