@@ -6,7 +6,7 @@ export class SkillTree {
     this.character       = character
     this.statGen         = character.statGen
     this.classFilter     = 'all'
-    this.pracsPerClass   = {"Ranger": 0, "Thief": 0, "Warrior": 0, "Mage": 0, "Shaman": 0}
+    this.pracsPerClass   = {"Ranger": 0, "Thief": 0, "Warrior": 0, "Mage": 0, "Priest": 0, "Shaman": 0}
     this.pracsSpent      = {}
     this.skills_div      = document.getElementById('skills');
     this.skills_tabs     = document.getElementById('skills-tabs');
@@ -317,7 +317,12 @@ export class SkillTree {
   updateSkillHeaders() {
     let pracs_total = Object.values(this.pracsSpent).reduce((sum, value) => sum + value, 0);
 
+    console.log("pracs: ", this.pracsPerClass)
+    console.log("priest pracs: ", this.pracsPerClass['Priest'])
+
     for (const [className, value] of Object.entries(this.pracsPerClass)) {
+
+      console.log("class name: ", className)
 
       let pracs_spent = this.pracsPerClass[className];
  
@@ -329,6 +334,8 @@ export class SkillTree {
 
       pracs_span.textContent = `${pracs_spent} Pracs (${pracs_percent}%)`;
     }
+
+    $(".pie").peity("pie");
   }
 
   calcMultiClass(pracs_input, knowledge_current, knowledge_max) {
