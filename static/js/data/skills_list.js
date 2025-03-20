@@ -83,8 +83,8 @@ export const skillsList = [
     name: 'Leadership',
     class: 'Ranger',
     factions: ['Freefolk', 'Sauron', 'Renegades'],
-    exclude_races: [],
-    pracs: { max: 27, Orc: 18, Troll: 11, Númenórean: 27 },
+    exclude_races: ['Troll'],
+    pracs: { max: 27, Orc: 18, Númenórean: 27 },
     difficulty: 'Normal',
     knowledge_cap: 152,
     knowledge: { base: 17, wil: 4.0, wis: 3.5 }
