@@ -339,45 +339,48 @@ export class SkillTree {
   }
 
   calcMultiClass(pracs_input, knowledge_current, knowledge_max) {
-    //let total_pracs = 0
     let skill_class = pracs_input.getAttribute('data-class');
-
-    // Define class relationships and scaling factors
+  
+    // Define class relationships and scaling factors.
+    // (Added "Thief" for Mage below so that Thief pracs hurt Mage knowledge.)
     let class_modifiers = {
       "Thief": { "Priest": 1.3, "Shaman": 1.3 },
       "Priest": { "Thief": 1.3 },
       "Warrior": { "Mage": 1.3, "Shaman": 1.15 },
-      "Mage": { "Warrior": 1.3 },
-      "Shaman": { "Warrior": 1.15, "Thief": 1.3}
+      "Mage": { "Warrior": 1.3, "Thief": 1.3 },    // For Mage, Thief pracs count with 1.3× penalty.
+      "Shaman": { "Warrior": 1.15, "Thief": 1.3 }
     };
-
-    // Precompute total pracs outside of the loop
-    let total_pracs = Object.entries(this.pracsPerClass).reduce((total, [class_name, pracs]) => {
-      if (class_name !== "Ranger" && class_name !== skill_class) {
-
-        let modifier = 1; // Default multiplier is 1
-
-        // Apply the scaling modifier if the class relationship exists
-        if (class_modifiers[skill_class] && class_modifiers[skill_class][class_name]) {
-          modifier = class_modifiers[skill_class][class_name];
-        }
-
-        return total + (pracs * modifier);
+  
+    // Tally the weighted pracs.
+    let total_weighted = 0;
+    let weighted_in_class = 0;
+  
+    for (const [class_name, pracs] of Object.entries(this.pracsPerClass)) {
+      if (class_name === "Ranger") continue; // Skip Ranger.
+  
+      // For the skill's own class, use weight 1.
+      // For other classes, use the modifier if defined; otherwise, default to 1.
+      let weight = (class_name === skill_class) ? 1 : (class_modifiers[skill_class]?.[class_name] || 1);
+  
+      total_weighted += pracs * weight;
+      if (class_name === skill_class) {
+        weighted_in_class += pracs * weight;
       }
-      return total;
-    }, 0);
-
-    // Calculate the proportional drop based on how close current knowledge is to max
-    let base_drop = total_pracs * 0.1;
-    let max_drop = 25;
-    let proportion = knowledge_current / knowledge_max;
-    let drop = Math.min(base_drop, proportion * max_drop);
-
-    let min_knowledge = Math.max(0, Math.round(knowledge_current - drop));
-    let knowledge = Math.round(knowledge_current - drop);
-
-    return Math.max(knowledge, min_knowledge);
-  }
+    }
+  
+    // Avoid division by zero.
+    if (total_weighted === 0) return knowledge_current;
+  
+    let weighted_outside = total_weighted - weighted_in_class;
+    let max_penalty = 25; // Maximum reduction percentage.
+    let penalty_ratio = weighted_outside / total_weighted;
+    let drop = penalty_ratio * max_penalty;
+  
+    // The final adjusted knowledge is the base knowledge minus the penalty.
+    // (You can adjust rounding as needed.)
+    let final_knowledge = Math.max(0, Math.round(knowledge_current - drop));
+    return final_knowledge;
+  }  
 
   updateKnowledge() {
     console.log("update knowledge");
