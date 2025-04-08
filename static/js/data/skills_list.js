@@ -184,10 +184,20 @@ export const skillsList = [
     name: 'Escape',
     class: 'Thief',
     factions: ['Freefolk', 'Sauron', 'Renegades'],
-    exclude_races: [],
-    pracs: { max: 16, Troll: 8, Númenórean: 13 },
+    exclude_races: ['Númenórean', 'Troll'],
+    pracs: { max: 16, Troll: 8 },
     difficulty: 'Normal',
     knowledge_cap: 109,
+    knowledge: { base: 6, dex: 3.1, per: 2.6 }
+  },
+  {
+    name: 'Escape',
+    class: 'Thief',
+    factions: ['Sauron'],
+    exclude_races: ['Orc'],
+    pracs: { max: 13, Troll: 8, Númenórean: 13 },
+    difficulty: 'Normal',
+    knowledge_cap: 101,
     knowledge: { base: 6, dex: 3.1, per: 2.6 }
   },
   {
